@@ -1,0 +1,23 @@
+name cape3
+type pshot
+speed 1
+gfxshadow 1
+anim idle 
+	offset 63 56
+	bbox 0 0 0 0
+	delay 2
+	movea -2
+	flipframe 0
+	frame data/chars/jack/005
+	frame data/chars/jack/005
+	frame data/chars/jack/005
+	frame data/chars/jack/005
+	frame data/chars/jack/005
+	delay 5
+	frame data/chars/misc/empty
+	frame data/chars/jack/005
+	frame data/chars/misc/empty
+	frame data/chars/jack/005
+	frame data/chars/misc/empty
+	frame data/chars/jack/005
+	frame data/chars/misc/empty

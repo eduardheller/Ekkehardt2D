@@ -1,0 +1,1039 @@
+name	Death
+health	600
+speed	10
+type	enemy
+aimove chase
+aimove wander
+shadow	3
+noquake 1
+score	10000	5
+falldie 1
+nodieblink 1
+throwdamage	20
+paingrab 1
+grabdistance 24
+running  10 4 2 1 0
+gfxshadow 1
+jumpheight 3
+thold 30
+blockodds 1
+bflash flashf
+load zombie
+escapehits 5
+hostile player 
+candamage player npc enemy obstacle
+projectilehit   enemy obstacle npc
+icon data/chars/doc/icon
+animationscript data/scripts/were.c
+antigravity 20
+dust dust
+load dust
+height  1000
+load tlk7
+aggression 50
+palette data/chars/death/00
+alternatepal data/chars/death/alt1a
+anim bdie
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	jumpframe 0 3 -1 0
+	landframe 15
+	bounce 1
+	drawmethod 320 320
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	nodrawmethod
+	delay 15
+	offset  71 164
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+	delay 10
+	bbox    0 0 0 0
+	frame	data/chars/death/17
+	frame	data/chars/death/18
+	frame	data/chars/death/19
+	frame	data/chars/death/20
+	frame	data/chars/death/21
+	delay 10
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	frame	data/chars/death/13
+	frame	data/chars/death/12
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	frame	data/chars/death/13
+	frame	data/chars/death/12
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	delay   100
+	sound   data/sounds/death4.wav
+	frame	data/chars/death/13
+anim burn
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	bounce 1
+	landframe 15
+	drawmethod 320 320
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	nodrawmethod 
+	offset  71 164
+	delay 30
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+anim sdie
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	jumpframe 0 3 -1 0
+	landframe 15
+	bounce 1
+	drawmethod 320 320
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	nodrawmethod
+	delay 15
+	offset  71 164
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+	delay 10
+	bbox    0 0 0 0
+	frame	data/chars/death/17
+	frame	data/chars/death/18
+	frame	data/chars/death/19
+	frame	data/chars/death/20
+	frame	data/chars/death/21
+	delay 10
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	frame	data/chars/death/13
+	frame	data/chars/death/12
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	frame	data/chars/death/13
+	frame	data/chars/death/12
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	delay   100
+	sound   data/sounds/death4.wav
+	frame	data/chars/death/13
+anim shock
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	landframe 15
+	bounce 1
+	drawmethod 320 320
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	nodrawmethod 
+	offset  71 164
+	delay 30
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+anim spawn
+	delay	30
+	offset  71 164
+	bbox    0 0 0 0
+	spawnframe 6 160 220 0 1
+	subentity tlk7
+	frame	data/chars/death/04
+	sound data/sounds/n/ylifeme.wav
+	frame	data/chars/death/02
+	frame	data/chars/death/03
+	frame	data/chars/death/02
+	frame	data/chars/death/03
+	frame	data/chars/death/02
+	delay 1
+	frame	data/chars/death/02
+	delay 10
+	frame	data/chars/death/04
+anim idle
+	loop	1
+	delay	5
+	offset  71 164
+	bbox    46 33 48 108
+	@cmd antiwall -1 1 0
+	@cmd antiwall 1 -1 0
+	@cmd antiwall 0 5 0
+	frame	data/chars/death/01
+	offset  71 163
+	frame	data/chars/death/01
+	offset  71 162
+	frame	data/chars/death/01
+	offset  71 161
+	frame	data/chars/death/01
+	offset  71 160
+	frame	data/chars/death/01
+	offset  71 159
+	frame	data/chars/death/01
+	offset  71 158
+	frame	data/chars/death/01
+	offset  71 159
+	frame	data/chars/death/01
+	offset  71 160
+	frame	data/chars/death/01
+	offset  71 161
+	frame	data/chars/death/01
+	offset  71 162
+	frame	data/chars/death/01
+	offset  71 163
+	frame	data/chars/death/01
+	offset  71 164
+	frame	data/chars/death/01
+	offset  71 165
+	frame	data/chars/death/01
+	offset  71 166
+	frame	data/chars/death/01
+	offset  71 167
+	frame	data/chars/death/01
+	offset  71 168
+	frame	data/chars/death/01
+	offset  71 169
+	frame	data/chars/death/01
+	offset  71 170
+	frame	data/chars/death/01
+	offset  71 169
+	frame	data/chars/death/01
+	offset  71 168
+	frame	data/chars/death/01
+	offset  71 167
+	frame	data/chars/death/01
+	offset  71 166
+	frame	data/chars/death/01
+	offset  71 165
+	frame	data/chars/death/01
+anim block
+	delay	5
+	offset  71 164
+	bbox    0 0 0 0
+	frame	data/chars/death/09
+	offset  72 164
+	frame	data/chars/death/09
+	offset  70 164
+	frame	data/chars/death/09
+	@cmd velo001 -2 0 0
+	frame	data/chars/death/09
+	frame	data/chars/death/09
+	@cmd velo001 -1.6 0 0
+	frame	data/chars/death/09
+	frame	data/chars/death/09
+	@cmd velo001 -1.2 0 0
+	frame	data/chars/death/09
+	frame	data/chars/death/09
+	@cmd velo001 -0.8 0 0
+	frame	data/chars/death/09
+	frame	data/chars/death/09
+	@cmd velo001 -0.4 0 0
+	frame	data/chars/death/09
+	frame	data/chars/death/09
+	@cmd velo001 0 0 0
+	delay 10
+	bbox    46 33 48 108
+	frame	data/chars/death/09
+anim walk
+	loop	1
+	delay	25
+	offset  71 164
+	bbox    46 33 48 108
+	@cmd antiwall -1 1 0
+	@cmd antiwall 1 -1 0
+	@cmd antiwall 0 5 0
+	frame	data/chars/death/05
+	frame	data/chars/death/06
+	frame	data/chars/death/08
+	frame	data/chars/death/07
+anim run
+	loop	1
+	delay	15
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/05
+	frame	data/chars/death/06
+	frame	data/chars/death/08
+	frame	data/chars/death/06
+anim runattack
+	@cmd velo001 2 0 0
+	delay	5
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	sound   data/sounds/death2.wav
+	blast   85 87 47 23 8 1 0 10
+	frame	data/chars/death/22
+	frame	data/chars/death/23
+	blast   85 87 47 23 8 1 0 10
+	frame	data/chars/death/24
+	frame	data/chars/death/25
+	blast   34 88 64 18 8 1 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	blast   4 87 48 21 8 1 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	blast   6 88 49 19 8 1 0 10
+	frame	data/chars/death/30
+	@cmd velo001 1.5 0 0
+	frame	data/chars/death/31
+	blast   63 86 53 17 8 1 0 10
+	@cmd velo001 1 0 0
+	frame	data/chars/death/32
+	@cmd velo001 0.5 0 0
+	frame	data/chars/death/33
+anim attack1
+	range   20 60
+	@cmd velo001 1 0 0
+	delay	5
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	@cmd velo001 0.8 0 0
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	dropv 2 3
+	@cmd velo001 0.4 0 0
+	frame	data/chars/death/32
+	@cmd velo001 0.2 0 0
+	frame	data/chars/death/33
+anim attack2
+	range   150 160
+	delay 20
+	offset  71 164
+	bbox    46 33 48 108
+	spawnframe 0 70 0 0 0 0
+	subentity zombie
+	sound   data/sounds/death2.wav
+	frame	data/chars/death/34
+	delay 40
+	frame	data/chars/death/35
+	delay 10
+	frame	data/chars/death/34
+anim attack3
+	range   150 160
+	delay 15
+	@cmd velo001 2 0 0
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	blast   60 94 71 32 8 1 0 10
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	@cmd velo001 1.5 0 0
+	frame	data/chars/death/39
+	@cmd velo001 1 0 0
+	frame	data/chars/death/40
+	@cmd velo001 0.5 0 0
+	frame	data/chars/death/38
+anim attack4
+	range   150 160
+	delay 15
+	@cmd velo001 2 0.5 0
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	blast   60 94 71 32 8 1 0 10
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	@cmd velo001 1.5 0.5 0
+	frame	data/chars/death/39
+	@cmd velo001 1 0.4 0
+	frame	data/chars/death/40
+	@cmd velo001 0.5 0.2 0
+	frame	data/chars/death/38
+anim attack6
+	range   150 160
+	delay 15
+	@cmd velo001 2 -0.5 0
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	blast   60 94 71 32 8 1 0 10
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	@cmd velo001 1.5 -0.5 0
+	frame	data/chars/death/39
+	@cmd velo001 1 -0.4 0
+	frame	data/chars/death/40
+	@cmd velo001 0.5 -0.2 0
+	frame	data/chars/death/38
+anim upper
+	range   150 160
+	delay 15
+	jumpframe 0 3 2 0
+	offset  71 164
+	bbox    46 33 48 108
+	landframe 9
+	hitfx   data/sounds/knifes.wav
+	attack  60 94 71 32 8 1 0 0 10
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	delay 5
+	frame	data/chars/death/38
+anim attack8
+	rangez 10 -30
+	range   150 160
+	delay 15
+	jumpframe 0 3 2 0.5
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	attack   60 94 71 32 8 0 0 0 10
+	landframe 9
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	delay 5
+	frame	data/chars/death/38
+anim attack9
+	rangez -10 -30
+	range   150 160
+	delay 15
+	jumpframe 0 3 2 -0.5
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	attack   60 94 71 32 8 0 0 0 10
+	landframe 9
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	frame	data/chars/death/38
+	frame	data/chars/death/39
+	frame	data/chars/death/40
+	delay 5
+	frame	data/chars/death/38
+anim special
+	range   0 60
+	@cmd velo001 2 0 0
+	delay	5
+	offset  71 164
+	hitfx   data/sounds/knifes.wav
+	bbox    0 0 0 0
+	attack  85 87 47 23 2 1 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 1 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 1 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 1 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 1 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	@cmd velo001 1.5 0 0
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	@cmd velo001 1 0 0
+	frame	data/chars/death/32
+	@cmd velo001 0.5 0 0
+	frame	data/chars/death/33
+anim special2
+	range   0 60
+	@cmd velo001 2 0 0
+	delay	5
+	offset  71 164
+	hitfx   data/sounds/knifes.wav
+	bbox    0 0 0 0
+	attack  85 87 47 23 2 1 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 1 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 1 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 1 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 1 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	@cmd velo001 1.5 0 0
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	@cmd velo001 1 0 0
+	frame	data/chars/death/32
+	@cmd velo001 0.5 0 0
+	frame	data/chars/death/33
+anim pain
+	delay 2
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/12
+	delay  30
+	frame	data/chars/death/13
+	delay 10
+	frame	data/chars/death/12
+anim pain2
+	delay 2
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/10
+	delay  30
+	frame	data/chars/death/11
+	delay 10
+	frame	data/chars/death/10
+anim pain5
+	delay 1
+	offset  71 164
+	bbox    29 36 81 81
+	movea 1
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+	frame	data/chars/death/14
+anim pain9
+	offset 42 92
+	bbox   20 7 45 82
+	delay 5
+	drawmethod 384 384
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 -2
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	delay 300
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	delay 5
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+anim death9
+	offset 42 92
+	bbox   20 7 45 82
+	delay 5
+	drawmethod 384 384
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 -2
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	nodrawmethod
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/01
+	offset 42 92
+	bbox   20 7 45 82
+	delay 300
+	drawmethod 384 384
+	frame data/chars/misc/freze4
+	delay 20
+	frame data/chars/misc/freze3
+	frame data/chars/misc/freze2
+	frame data/chars/misc/freze1
+anim grabbed
+	delay 1
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/10
+anim grabbedwalk
+	delay 1
+	offset  71 204
+	bbox    46 33 48 108
+	frame	data/chars/death/10
+anim fall
+	delay 1000
+	offset  71 164
+	bbox    0 0 0 0
+	landframe 1
+	attack  44 61 28 53 6 1 0 0 20
+	hitflash bflash
+	frame	data/chars/death/14
+	delay 20
+	attack  0 0 0 0
+	frame	data/chars/death/15
+	delay 15
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+anim fall5
+	delay 1000
+	offset  71 164
+	bbox    44 61 28 53
+	landframe 1
+	attack  44 61 28 53 6 1 0 0 20
+	hitflash bflash
+	frame	data/chars/death/14
+	delay 20
+	attack  0 0 0 0
+	bbox    0 0 0 0
+	frame	data/chars/death/15
+	delay 30
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+anim fall8
+	delay 1000
+	offset  71 164
+	bbox    0 0 0 0
+	landframe 3
+	frame	data/chars/death/10a
+	frame	data/chars/death/x1
+	attack  44 61 28 53 6 1 0 0 20
+	hitflash bflash
+	frame	data/chars/death/14
+	delay 20
+	attack  0 0 0 0
+	frame	data/chars/death/15
+	delay 15
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+anim rise
+	delay 15
+	offset  71 164
+	bbox    22 145 111 17
+	frame	data/chars/death/16
+	delay 10
+	bbox    0 0 0 0
+	frame	data/chars/death/17
+	frame	data/chars/death/18
+	frame	data/chars/death/19
+	frame	data/chars/death/20
+	frame	data/chars/death/21
+anim riseattack
+	range   -150 150
+	delay 5
+	offset  71 164
+	bbox    0 0 0 0
+	#sound   data/sounds/death2.wav
+	sound data/sounds/n/ylifeme.wav
+	frame	data/chars/death/17
+	frame	data/chars/death/18
+	frame	data/chars/death/19
+	frame	data/chars/death/20
+	frame	data/chars/death/21
+	delay	5
+	offset  71 164
+	bbox    46 33 48 108
+	hitfx   data/sounds/knifes.wav
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	attack  0 0 0 0 0
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	attack  0 0 0 0 0
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	attack  0 0 0 0 0
+	frame	data/chars/death/33
+	@cmd velo001 1 1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	@cmd velo001 1 -1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	@cmd velo001 1 1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	@cmd velo001 1 -1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+@cmd velo001 -1 1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	@cmd velo001 -1 -1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	@cmd velo001 -1 1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	frame	data/chars/death/32
+	frame	data/chars/death/33
+	@cmd velo001 -1 -1 0
+	attack  85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/22
+	attack  0 0 0 0
+	frame	data/chars/death/23
+	attack   85 87 47 23 2 0 0 0 10
+	frame	data/chars/death/24
+	attack  0 0 0 0
+	frame	data/chars/death/25
+	attack  34 88 64 18 2 0 0 0 10
+	frame	data/chars/death/26
+	frame	data/chars/death/27
+	attack   4 87 48 21 2 0 0 0 10
+	frame	data/chars/death/28
+	frame	data/chars/death/29
+	attack   6 88 49 19 2 0 0 0 10
+	@cmd velo001 -0.8 -0.4 0
+	frame	data/chars/death/30
+	attack  0 0 0 0 
+	@cmd velo001 -0.6 -0.3 0
+	frame	data/chars/death/31
+	attack   63 86 53 17 2 1 0 0 10
+	@cmd velo001 -0.4 -0.2 0
+	frame	data/chars/death/32
+	@cmd velo001 -0.2 -0.1 0
+	frame	data/chars/death/33
+anim death
+	delay 5
+	offset  71 164
+	bbox    46 33 48 108
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	frame	data/chars/death/13
+	frame	data/chars/death/12
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	frame	data/chars/death/13
+	frame	data/chars/death/12
+	frame	data/chars/death/10
+	frame	data/chars/death/11
+	frame	data/chars/death/10
+	frame	data/chars/death/12
+	delay   100
+	sound   data/sounds/death4.wav
+	frame	data/chars/death/13

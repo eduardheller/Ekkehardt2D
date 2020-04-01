@@ -1,0 +1,101 @@
+name	Chris9
+health	100
+speed	11
+mprate 1
+nolife 1
+chargerate 2
+type	none
+shadow	3
+makeinv 4 
+running  22 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 2 3 4
+gfxshadow 1
+load cape
+load slamfl
+load chrspa
+load chrspb
+load chrspc
+load chrspd
+load chrspe
+load dust
+jumpheight 4
+bounce 1
+com u d j freespecial2
+com d u j freespecial4
+com d u a freespecial16
+com u d s freespecial3
+com b b s freespecial9
+com d u s freespecial18
+com a2 freespecial22
+icon data/chars/chris/icon
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+animationscript data/scripts/clear.c
+palette data/chars/chris/000
+anim spawn
+	@cmd clearL
+	offset	72 140
+	delay 70
+	bbox  0 0 0 0
+	frame	data/chars/misc/empty
+	delay 200
+	bbox	57 43 27 73
+	frame	data/chars/chris/001
+	delay 15
+	frame	data/chars/chris/002
+	frame	data/chars/chris/003
+	frame	data/chars/chris/004
+	delay 1
+	@cmd shoot "cape" 21 13 0
+	frame	data/chars/chris/005
+anim respawn
+	@cmd clearL
+	offset	72 140
+	delay 70
+	bbox  0 0 0 0
+	frame	data/chars/misc/empty
+	delay 200
+	bbox	57 43 27 73
+	frame	data/chars/chris/001
+	delay 20
+	frame	data/chars/chris/002
+	frame	data/chars/chris/003
+	frame	data/chars/chris/004
+	delay 1
+	@cmd shoot "cape" 21 13 0
+	frame	data/chars/chris/005
+anim idle       
+	loop	1
+	offset	72 140
+	delay 20
+	bbox	57 43 27 73
+	weaponframe 0 0
+	frame	data/chars/chris/005
+	frame	data/chars/chris/006
+	frame	data/chars/chris/007
+	frame	data/chars/chris/008
+	frame	data/chars/chris/007
+	frame	data/chars/chris/006
+anim walk
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	weaponframe 0 0
+	frame	data/chars/chris/009
+	frame	data/chars/chris/010
+	frame	data/chars/chris/011
+	frame	data/chars/chris/012
+	frame	data/chars/chris/013
+	frame	data/chars/chris/014
+	frame	data/chars/chris/015
+	frame	data/chars/chris/016

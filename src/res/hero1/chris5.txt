@@ -1,0 +1,434 @@
+name	Chris5
+health	100
+speed	11
+nolife 1
+type	none
+holdblock 1
+shadow	3
+makeinv 4 
+running  22 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 2 3 4
+gfxshadow 1
+load cape
+load chris2
+load slamfl
+load chrspa
+load chrspb
+load chrspc
+load chrspd
+load chrspe
+load chris6
+load dust
+jumpheight 4
+bounce 1
+com a2 freespecial22
+com u d s freespecial3
+icon data/chars/chris/icon
+animationscript data/scripts/playerb.c
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+palette data/chars/chris/000
+atchain 1 2 2 2 2 2 2 2 2 2
+anim spawn
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/01
+anim respawn
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/01
+anim idle        
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/01
+anim walk
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/03
+	frame	data/chars/chris/chmgun/04
+	frame	data/chars/chris/chmgun/05
+	frame	data/chars/chris/chmgun/06
+	frame	data/chars/chris/chmgun/07
+	frame	data/chars/chris/chmgun/08
+	frame	data/chars/chris/chmgun/09
+	frame	data/chars/chris/chmgun/10
+anim run
+	loop	1
+	offset	72 140
+	delay 8
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/11
+	frame	data/chars/chris/chmgun/12
+	frame	data/chars/chris/chmgun/13
+	frame	data/chars/chris/chmgun/14
+	frame	data/chars/chris/chmgun/15
+	frame	data/chars/chris/chmgun/16
+	frame	data/chars/chris/chmgun/17
+	frame	data/chars/chris/chmgun/18
+anim runattack
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	@cmd velo001 2 0 0
+	frame	data/chars/chris/chmgun/19
+	@cmd shoot "dust" 20 1 0
+	sound   data/sounds/chrrat.wav
+	frame	data/chars/chris/chmgun/20
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/chmgun/25
+	blast   72 56 56 34 10 0 0 30
+	frame	data/chars/chris/chmgun/21
+	frame	data/chars/chris/chmgun/25
+	@cmd velo001 1.5 0 0
+	frame	data/chars/chris/chmgun/22
+	blast 0
+	frame	data/chars/chris/chmgun/25
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/chmgun/23
+	frame	data/chars/chris/chmgun/25
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/chmgun/24
+	frame	data/chars/chris/chmgun/25
+	blast   0 0 0 0
+	@cmd velo001 0 0 0
+	frame	data/chars/chris/chmgun/19
+anim attackbackward
+anim attack1
+	@script
+	void self = getlocalvar("self");
+	void vAniPos = getentityproperty(self, "animpos");
+	void target = findtarget(self);
+	void eAniID = getentityproperty(target, "animationID");
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+		if(eAniID == openborconstant("ANI_FALL") || eAniID == openborconstant("ANI_RISE") || eAniID == openborconstant("ANI_FALL5") || eAniID == openborconstant("ANI_FALL8") || eAniID == openborconstant("ANI_RISE")){
+			if(z1-z2<20 && z1-z2>-20 && x1-x2>-80 && x1-x2<80){
+				if(playerkeys(getentityproperty(self, "playerindex"), 0, "moveup")){
+					changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL11"));
+				}
+				if(playerkeys(getentityproperty(self, "playerindex"), 0, "movedown")){
+					changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL14"));
+				}
+			}
+		}
+	}
+	@end_script
+	offset	72 140
+	delay 3
+	bbox	57 43 27 73
+	shootframe 1 86
+	hitfx data/sounds/empty.wav
+	frame	data/chars/chris/chmgun/01
+	sound   data/sounds/MSH.wav
+	@cmd shoot "mshbl" 65 85 2
+	attack5 73 47 71 24 5 1 1
+	dropv 3 2
+	frame	data/chars/chris/chmgun/02
+	@cmd toss "shel" 28 83 0
+	blast 0
+	frame	data/chars/chris/chmgun/02
+anim attack2
+	offset	72 140
+	delay 3
+	bbox	57 43 27 73
+	shootframe 1 86
+	hitfx data/sounds/empty.wav
+	frame	data/chars/chris/chmgun/01
+	sound   data/sounds/MSH.wav
+	@cmd shoot "mshbl" 65 85 2
+	attack5 73 47 71 24 5 1 1
+	dropv 3 2
+	frame	data/chars/chris/chmgun/02
+	@cmd toss "shel" 28 83 0
+	attack5 0
+	frame	data/chars/chris/chmgun/02
+anim attack3
+anim attack4
+anim attackdown
+anim attackup
+anim special2
+anim special3
+	energycost 20
+	offset	72 140
+	delay 5
+	dive 0 -1
+	bbox	0 0 0 0
+	spawnframe 7 0 120 0 1
+	subentity chspmg
+	hitfx   data/sounds/empty.wav
+	frame	data/chars/chris/115
+	frame	data/chars/chris/116
+	frame	data/chars/chris/117
+	frame	data/chars/chris/118
+	frame	data/chars/chris/119
+	frame	data/chars/chris/120
+	frame	data/chars/chris/121
+	delay 1
+	sound   data/sounds/bckabs.wav
+	frame	data/chars/chris/121
+	@cmd spawner "chrspa"  0 -1 1
+	hitflash bblod
+	attack -1000 -1000 2000 2000 49 1 0 0 10 1000
+	dropv 5 -3
+	otg 1
+	frame	data/chars/chris/122
+	sound   data/sounds/bosfinsh.wav
+	@cmd ani001 "ANI_JUMP" 2
+	frame	data/chars/chris/122
+anim jumpdelay
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/26
+anim jumpland
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/26
+anim jump
+	offset	72 140
+	delay 10
+	dropframe 3
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/27
+	frame	data/chars/chris/chmgun/28
+	frame	data/chars/chris/chmgun/29
+	frame	data/chars/chris/chmgun/28
+	delay   1000
+	frame	data/chars/chris/chmgun/27
+anim jumpattack
+	offset	72 140
+	delay 5
+	bbox	61 40 25 58
+	frame	data/chars/chris/chmgun/40
+	delay   10
+	offset	72 153
+	sound   data/sounds/punch.wav
+	attack  74 69 52 29 6 1 0 0 20
+	dropv 4 2
+	frame	data/chars/chris/chmgun/41
+	delay   1000
+	attack  74 69 52 29 6 1 0 0 20
+	frame	data/chars/chris/chmgun/41
+anim forwardjump
+	offset	72 140
+	delay 10
+	dropframe 3
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/34
+	frame	data/chars/chris/chmgun/35
+	frame	data/chars/chris/chmgun/36
+	frame	data/chars/chris/chmgun/37
+	frame	data/chars/chris/chmgun/38
+	delay   1000
+	frame	data/chars/chris/chmgun/39
+anim runjump
+	offset	72 140
+	delay 10
+	dropframe 3
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/34
+	frame	data/chars/chris/chmgun/35
+	frame	data/chars/chris/chmgun/36
+	frame	data/chars/chris/chmgun/37
+	frame	data/chars/chris/chmgun/38
+	delay   1000
+	frame	data/chars/chris/chmgun/39
+anim jumpforward
+	offset	72 140
+	delay 5
+	bbox	41 61 44 39
+	frame	data/chars/chris/chmgun/30
+	frame	data/chars/chris/chmgun/31
+	delay   1000
+	sound   data/sounds/punch.wav
+	attack  66 77 66 42 6 1 0 0 20
+	frame	data/chars/chris/chmgun/32
+anim jumpattack2
+	offset	72 140
+	delay 5
+	dive  2 3
+	bbox	41 61 44 39
+	frame	data/chars/chris/chmgun/30
+	frame	data/chars/chris/chmgun/31
+	delay   1000
+	sound   data/sounds/punch.wav
+	attack  66 77 66 42 6 1 0 0 20
+	frame	data/chars/chris/chmgun/32
+anim jumpattack3
+	offset	72 140
+	delay 5
+	bbox	41 61 44 39
+	frame	data/chars/chris/chmgun/30
+	frame	data/chars/chris/chmgun/31
+	delay   1000
+	sound   data/sounds/punch.wav
+	attack  66 77 66 42 6 1 0 0 20
+	frame	data/chars/chris/chmgun/32
+anim grab
+anim grabattack2
+anim throw
+anim grabdown
+anim grabup
+anim grabforward
+anim grabforward2
+anim block
+	loop 1
+	counterframe 0 1 0
+	followanim 1
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/chris/chmgun/33
+anim follow1
+	offset	71 140
+	delay 5
+	bbox	57 43 27 73
+	sound data/sounds/block.wav
+	frame	data/chars/chris/chmgun/33
+	offset	72 140
+	frame	data/chars/chris/chmgun/33
+	offset	71 140
+	frame	data/chars/chris/chmgun/33
+	@cmd velo001 -2 0 0
+	offset	72 140
+	frame	data/chars/chris/chmgun/33
+	frame	data/chars/chris/chmgun/33
+	@cmd velo001 -1.6 0 0
+	frame	data/chars/chris/chmgun/33
+	frame	data/chars/chris/chmgun/33
+	@cmd velo001 -1.2 0 0
+	frame	data/chars/chris/chmgun/33
+	frame	data/chars/chris/chmgun/33
+	@cmd velo001 -0.8 0 0
+	frame	data/chars/chris/chmgun/33
+	frame	data/chars/chris/chmgun/33
+	@cmd velo001 -0.4 0 0
+	frame	data/chars/chris/chmgun/33
+	frame	data/chars/chris/chmgun/33
+	@cmd velo001 0 0 0
+	delay   10
+	frame	data/chars/chris/chmgun/33
+anim follow2
+anim follow5
+anim follow6
+anim follow6
+anim follow8
+anim follow7
+anim freespecial2
+anim freespecial4
+anim freespecial11
+	offset	72 140
+	delay 10
+	jumpframe 0 3 1 0
+	dropframe 3
+	landframe 5
+	bbox	57 43 27 73
+	hitflash bblod
+	frame	data/chars/chris/chmgun/27
+	frame	data/chars/chris/chmgun/28
+	frame	data/chars/chris/chmgun/29
+	frame	data/chars/chris/chmgun/28
+	delay   1000
+	frame	data/chars/chris/chmgun/27
+	delay 10
+	bbox	57 43 27 73
+	attack3 64 132 17 11 10 1 0 0 30
+	otg 1
+	dropv 2 1
+	frame	data/chars/chris/chmgun/26
+anim freespecial14
+	offset	72 110
+	delay 100
+	bbox	41 63 49 38
+	jumpframe 0 2 1 0
+	landframe 1
+	frame	data/chars/chris/chmgun/31
+	bbox	51 104 52 38
+	offset	89 140
+	delay 5
+	@cmd velo001 1 0 0
+	hitflash bflash
+	attack  81 97 66 46 10 1 0 0 10
+	otg 1
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	frame	data/chars/chris/d9
+	@cmd velo001 0.9 0 0
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	@cmd velo001 0.6 0 0
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	@cmd velo001 0.3 0 0
+	frame	data/chars/chris/d7       
+	frame	data/chars/chris/d9
+	attack  0 0 0 0 0
+	@cmd velo001 0 0 0
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/099
+anim runslide
+	offset	72 110
+	delay 100
+	bbox	41 63 49 38
+	jumpframe 0 2 1 0
+	landframe 1
+	frame	data/chars/chris/chmgun/31
+	bbox	51 104 52 38
+	offset	89 140
+	delay 5
+	@cmd velo001 2 0 0
+	hitflash bflash
+	sound data/sounds/slide.wav
+	attack  81 97 66 46 10 1 0 0 10
+	otg 1
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 1.5 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	attack  0 0 0 0 0
+	@cmd velo001 0 0 0
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/099
+anim freespecial22
+	delay 10
+	offset	72 140
+	bbox	0 0 0 0
+	weaponframe 2 0
+	frame	data/chars/chris/099
+	frame	data/chars/chris/100
+	frame	data/chars/chris/100
+

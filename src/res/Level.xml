@@ -1,0 +1,82 @@
+<levels>
+	<level1>
+		<sequence x="200">
+			<phase ammo="1" heal="0">
+				<enemy1 count="2" dir="r"></enemy1>
+				<enemy3 count="1" dir="l"></enemy3>
+			</phase>
+			<phase ammo="1" heal="0">
+				<enemy3 count="2" dir="r"></enemy3>
+				<enemy1 count="2" dir="l"></enemy1>
+			</phase>
+		</sequence>
+		<sequence x="350">
+			<phase ammo="2" heal="1">
+				<enemy3 count="2" dir="l"></enemy3>
+				<enemy3 count="3" dir="r"></enemy3>
+			</phase>
+			<phase ammo="0" heal="1">
+				<enemy2 count="1" dir="l"></enemy2>
+				<enemy2 count="1" dir="r"></enemy2>
+			</phase>
+		</sequence>
+	</level1>
+	<level2>
+		<sequence x="200">
+			<phase ammo="0" heal="1">
+				<enemy1 count="2" dir="l"></enemy1>
+				<enemy3 count="2" dir="r"></enemy3>
+				<enemy2 count="1" dir="r"></enemy2>
+				<enemy2 count="1" dir="l"></enemy2>
+			</phase>
+			<phase ammo="0" heal="0">
+				<hounds count="11" dir="r"></hounds>
+			</phase>
+		</sequence>
+		<sequence x="350">
+			<phase ammo="1" heal="0">
+				<enemy2 count="3" dir="l"></enemy2>
+				<enemy2 count="3" dir="r"></enemy2>	
+			</phase>
+		</sequence>
+	</level2>
+	<level3>
+		<sequence x="200">
+			<phase ammo="1" heal="0">
+				<hounds count="5" dir="r"></hounds>
+				<enemy1 count="2" dir="l"></enemy1>
+				<enemy3 count="2" dir="r"></enemy3>	
+			</phase>
+		</sequence>
+		<sequence x="350">
+			<phase ammo="1" heal="0">
+				<hounds count="10" dir="r"></hounds>
+				<zboss count="1" dir="l"></zboss>
+				<enemy2 count="1" dir="r"></enemy2>
+			</phase>
+		</sequence>
+	</level3>
+	<level4>
+		<sequence x="200">
+			<phase ammo="0" heal="0">
+				<zboss count="1" dir="l"></zboss>
+				<zboss count="1" dir="r"></zboss>
+			</phase>
+			<phase ammo="1" heal="2">
+				<hounds count="4" dir="r"></hounds>
+				<enemy1 count="2" dir="l"></enemy1>
+				<enemy3 count="2" dir="r"></enemy3>	
+			</phase>
+		</sequence>
+		<sequence x="350">
+			<phase ammo="0" heal="0">
+				<hounds count="8" dir="r"></hounds>
+				<zboss count="1" dir="l"></zboss>
+				<zboss count="1" dir="rs"></zboss>
+			</phase>
+		</sequence>
+	</level4>
+	<level5>
+	</level5>
+	
+</levels>

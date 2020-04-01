@@ -1,0 +1,519 @@
+name	jas7
+health	100
+speed	12
+mprate 1
+nolife 1
+holdblock 1
+chargerate 2
+type	none
+shadow	3
+makeinv 4 
+running  24 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 1 1 1
+gfxshadow 1
+jumpheight 4
+bounce 1
+com u d s freespecial3
+com a2 freespecial22
+icon data/chars/jasmin/icon
+animationscript data/scripts/playerb.c 
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+anim idle
+	loop	1
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/01
+	frame	data/chars/jasmin/jaschsw/02
+anim walk
+	loop	1
+	delay 12
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/03
+	frame	data/chars/jasmin/jaschsw/04
+	frame	data/chars/jasmin/jaschsw/05
+	frame	data/chars/jasmin/jaschsw/06
+	frame	data/chars/jasmin/jaschsw/07
+	frame	data/chars/jasmin/jaschsw/08
+anim run
+	loop	1
+	offset	76 143
+	delay 11
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/09
+	frame	data/chars/jasmin/jaschsw/10
+	frame	data/chars/jasmin/jaschsw/11
+	frame	data/chars/jasmin/jaschsw/12
+	frame	data/chars/jasmin/jaschsw/13
+	frame	data/chars/jasmin/jaschsw/14
+anim runattack
+	offset	76 143
+	bbox	60 47 25 69
+	delay 10
+	fastattack 1
+	hitflash bblod
+	@cmd velo001 2 0 0
+	hitfx data/sounds/empty.wav
+	sound data/sounds/chain.wav
+	attack  81 56 52 16 10 0 0 0 10
+	seal 5 0
+	frame	data/chars/jasmin/jaschsw/19
+	delay 5
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/20
+	frame	data/chars/jasmin/jaschsw/21
+	attack  81 56 52 16 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 1.8 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 0 0 0 10
+	@cmd velo001 1.6 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 1.4 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 0 0 0 10
+	@cmd velo001 1.2 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 1 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 1 0 0 10
+	@cmd velo001 0.8 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 0.6 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 1 0 0 10
+	@cmd velo001 0.4 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 0.2 0 0
+	frame	data/chars/jasmin/jaschsw/23
+anim attackbackward
+anim attack1
+	@script
+	void self = getlocalvar("self");
+	void vAniPos = getentityproperty(self, "animpos");
+	void target = findtarget(self);
+	void eAniID = getentityproperty(target, "animationID");
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+	if(eAniID == openborconstant("ANI_FALL") || eAniID == openborconstant("ANI_RISE") || eAniID == openborconstant("ANI_FALL5") || eAniID == openborconstant("ANI_FALL8") || eAniID == openborconstant("ANI_RISE")){
+	if(z1-z2<20 && z1-z2>-20 && x1-x2>-100 && x1-x2<100){
+	if(playerkeys(getentityproperty(self, "playerindex"), 0, "movedown")){
+	changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL11"));
+	}
+	if(playerkeys(getentityproperty(self, "playerindex"), 0, "moveup")){
+	changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL14"));
+	}
+	}
+	}
+	}
+	@end_script
+	offset	76 143
+	bbox	60 47 25 69
+	delay 5
+	fastattack 1
+	hitflash bblod
+	hitfx data/sounds/empty.wav
+	frame	data/chars/jasmin/jaschsw/15
+	attack  84 68 55 34 10 0 0 0 10
+	seal 5 0
+	sound data/sounds/chain.wav
+	frame	data/chars/jasmin/jaschsw/16
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+	attack  0 0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/17
+	attack  86 66 80 41 10 1 0 0 10
+	frame	data/chars/jasmin/jaschsw/18
+anim attack2
+anim attack3
+anim attack4
+anim attackdown
+anim attackup
+anim special2
+	offset	76 143
+	bbox	60 47 25 69
+	delay 10
+	fastattack 1
+	hitflash bblod
+	hitfx data/sounds/empty.wav
+	sound data/sounds/chain.wav
+	attack  81 56 52 16 10 0 0 0 10
+	seal 5 0
+	frame	data/chars/jasmin/jaschsw/19
+	delay 5
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/20
+	frame	data/chars/jasmin/jaschsw/21
+	attack  81 56 52 16 10 0 0 0 10
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 1.8 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 0 0 0 10
+	@cmd velo001 1.6 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 1.4 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 0 0 0 10
+	@cmd velo001 1.2 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 1 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 1 0 0 10
+	@cmd velo001 0.8 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 0.6 0 0
+	frame	data/chars/jasmin/jaschsw/23
+	attack  98 71 62 16 10 1 0 0 10
+	@cmd velo001 0.4 0 0
+	frame	data/chars/jasmin/jaschsw/22
+	attack  0 0 0 0
+	@cmd velo001 0.2 0 0
+	frame	data/chars/jasmin/jaschsw/23
+anim special3
+	energycost 20
+	offset	76 143
+	delay 5
+	dive 0 -1
+	bbox	60 47 25 69
+	spawnframe 7 0 120 0 1
+	subentity jaspmg
+	hitfx   data/sounds/empty.wav
+	frame	data/chars/jasmin/188
+	frame	data/chars/jasmin/188
+	frame	data/chars/jasmin/188
+	frame	data/chars/jasmin/189
+	frame	data/chars/jasmin/189
+	frame	data/chars/jasmin/190
+	frame	data/chars/jasmin/190
+	delay 1
+	frame	data/chars/jasmin/190
+	@cmd spawner "jasspa"  0 -1 1
+	hitflash bblod
+	blast  -1000 -1000 2000 2000 50 1 0 10 1000
+	otg 1
+	frame	data/chars/jasmin/190
+	sound   data/sounds/bosfinsh.wav
+	@cmd ani001 "ANI_JUMP" 2
+	frame	data/chars/jasmin/190
+anim jumpdelay
+	delay 10
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/24
+anim jumpland
+	delay 10
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/24
+anim jump
+	delay 20
+	dropframe 1
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/25
+	delay  20
+	frame	data/chars/jasmin/jaschsw/26
+	delay 1000
+	frame	data/chars/jasmin/jaschsw/27
+anim forwardjump
+	offset	76 143
+	delay 20
+	dropframe 1
+	bbox	56 67 38 37
+	frame	data/chars/jasmin/jaschsw/25
+	delay  20
+	frame	data/chars/jasmin/jaschsw/26
+	delay 1000
+	frame	data/chars/jasmin/jaschsw/27
+anim runjump
+	offset	76 143
+	delay 10
+	bbox	56 67 38 37
+	frame	data/chars/jasmin/jaschsw/28
+	frame	data/chars/jasmin/jaschsw/29
+	frame	data/chars/jasmin/jaschsw/30
+	frame	data/chars/jasmin/jaschsw/31
+	frame	data/chars/jasmin/jaschsw/32
+	frame	data/chars/jasmin/jaschsw/33
+	frame	data/chars/jasmin/jaschsw/34
+	delay 1000
+	frame	data/chars/jasmin/jaschsw/35
+anim runjumpattack
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/39
+	sound   data/sounds/punch2.wav
+	attack 10 83 127 14 10 1 0 0 25
+	frame	data/chars/jasmin/jaschsw/40
+	attack  0 0 0 0 0
+	frame	data/chars/jasmin/jaschsw/41
+	frame	data/chars/jasmin/jaschsw/42
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 25
+	delay 1000
+	frame	data/chars/jasmin/jaschsw/43
+anim jumpattack
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/41
+	frame	data/chars/jasmin/jaschsw/42
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 20
+	frame	data/chars/jasmin/jaschsw/43
+anim jumpforward
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/41
+	frame	data/chars/jasmin/jaschsw/42
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 20
+	frame	data/chars/jasmin/jaschsw/43
+anim jumpattack3
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/41
+	frame	data/chars/jasmin/jaschsw/42
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 20
+	otg 1
+	frame	data/chars/jasmin/jaschsw/43
+anim jumpattack2
+	offset	76 143
+	delay 5
+	dive  2 3
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/41
+	frame	data/chars/jasmin/jaschsw/42
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 20
+	otg 1
+	frame	data/chars/jasmin/jaschsw/43
+anim grab
+anim grabattack
+anim grabattack2
+anim grabup2
+anim throw
+anim follow13
+anim grabdown
+anim grabup
+anim grabdown2
+anim grabforward2
+anim block
+	loop 1
+	counterframe 0 1 0
+	followanim 1
+	delay 1
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/37
+anim follow1
+	offset	77 143
+	delay 5
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/jaschsw/37
+	offset	76 143
+	frame	data/chars/jasmin/jaschsw/37
+	offset	77 143
+	frame	data/chars/jasmin/jaschsw/37
+	@cmd velo001 -2 0 0
+	offset	76 143
+	@cmd shoot "dust" 0 0 1
+	frame	data/chars/jasmin/jaschsw/37
+	frame	data/chars/jasmin/jaschsw/37
+	@cmd velo001 -1.6 0 0
+	frame	data/chars/jasmin/jaschsw/37
+	frame	data/chars/jasmin/jaschsw/37
+	@cmd velo001 -1.2 0 0
+	frame	data/chars/jasmin/jaschsw/37
+	frame	data/chars/jasmin/jaschsw/37
+	@cmd velo001 -0.8 0 0
+	frame	data/chars/jasmin/jaschsw/37
+	frame	data/chars/jasmin/jaschsw/37
+	@cmd velo001 -0.4 0 0
+	frame	data/chars/jasmin/jaschsw/37
+	frame	data/chars/jasmin/jaschsw/37
+	@cmd velo001 0 0 0
+	delay   10
+	frame	data/chars/jasmin/jaschsw/37
+anim freespecial17
+anim freespecial5
+anim freespecial6
+anim freespecial8
+anim freespecial7
+anim freespecial9
+anim freespecial10
+anim freespecial11
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	hitflash bblod
+	frame	data/chars/jasmin/jaschsw/44
+	hitfx data/sounds/empty.wav
+	sound data/sounds/chain.wav
+	frame	data/chars/jasmin/jaschsw/45
+	frame	data/chars/jasmin/jaschsw/44
+	frame	data/chars/jasmin/jaschsw/45
+	frame	data/chars/jasmin/jaschsw/46
+	frame	data/chars/jasmin/jaschsw/47
+	attack3 123 117 31 23 15 0 0 0 10
+	seal 5 0
+	otg 1
+	noreflect 1
+	frame	data/chars/jasmin/jaschsw/48
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/49
+	attack3 123 117 31 23 15 0 0 0 10
+	otg 1
+	noreflect 1
+	frame	data/chars/jasmin/jaschsw/48
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/49
+	attack3 123 117 31 23 15 1 0 0 10
+	otg 1
+	noreflect 1
+	frame	data/chars/jasmin/jaschsw/48
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/49
+	attack3 123 117 31 23 15 0 0 0 10
+	otg 1
+	noreflect 1
+	frame	data/chars/jasmin/jaschsw/48
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/49
+	attack3 123 117 31 23 15 0 0 0 10
+	otg 1
+	noreflect 1
+	frame	data/chars/jasmin/jaschsw/48
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/49
+	attack3 123 117 31 23 15 1 0 0 10
+	otg 1
+	noreflect 0
+	frame	data/chars/jasmin/jaschsw/48
+	attack  0 0 0 0
+	frame	data/chars/jasmin/jaschsw/49
+anim freespecial12
+anim follow14      
+anim freespecial14
+	offset	76 143
+	delay 10
+	landframe 4
+	jumpframe 0 2 1 0
+	bbox	59 50 29 58
+	hitflash bblod
+	frame	data/chars/jasmin/jaschsw/50
+	frame	data/chars/jasmin/jaschsw/51
+	frame	data/chars/jasmin/jaschsw/52
+	delay 1000
+	frame	data/chars/jasmin/jaschsw/53
+	bbox	57 43 27 73
+	attack3 61 123 26 12 10 1 0 0 30
+	otg 1
+	dropv 2 1
+	delay 10
+	frame	data/chars/jasmin/jaschsw/53
+anim freespecial16
+anim freespecial18
+anim freespecial19
+anim freespecial20
+anim freespecial23
+anim freespecial24
+anim runslide       
+	offset	76 143
+	delay 100
+	bbox	0 0 0 0
+	jumpframe 0 2 2 0
+	landframe 1
+	frame	data/chars/jasmin/jaschsw/38
+	offset	102 149
+	delay 5
+	hitflash bflash
+	@cmd velo001 2 0 0
+	bbox	53 97 45 51
+	sound data/sounds/slide.wav
+	attack3  88 109 57 40 10 1 0 0 10
+	otg 1
+	frame	data/chars/jasmin/0331
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0332
+	@cmd velo001 1.5 0 0
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0333
+	frame	data/chars/jasmin/0334
+	@cmd velo001 1 0 0
+	frame	data/chars/jasmin/0331
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0332
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0333
+	frame	data/chars/jasmin/0334
+	attack  0 0 0 0 0
+	@cmd velo001 0 0 0
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/034
+	frame	data/chars/jasmin/jaschsw/38
+anim freespecial22
+	delay 5
+	offset	76 143
+	bbox	0 0 0 0
+	weaponframe 2 0
+	frame	data/chars/jasmin/jaschsw/01
+	delay 10
+	frame	data/chars/jasmin/045
+	frame	data/chars/jasmin/045

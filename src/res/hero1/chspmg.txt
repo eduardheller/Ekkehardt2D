@@ -1,0 +1,24 @@
+name	chspmg
+type	text
+subtype noskip
+facing 1
+setlayer 1000
+load spbg
+animationscript data/scripts/flash.c
+palette data/chars/chris/sel8 
+anim idle
+	delay	1
+	offset	81 64
+	bbox 0 0 0 0
+	@cmd velo001 -2 0 0
+	spawnframe 0 160 120 0 1
+	subentity spbg
+	frame	data/chars/misc/empty
+	delay 80
+	drawmethod 512 512
+	frame	data/chars/chris/sel8 
+	delay 30
+	@cmd velo001 0 0 0
+	frame	data/chars/chris/sel8 
+	@cmd killentity getlocalvar("self")
+	frame	data/chars/misc/empty

@@ -1,0 +1,98 @@
+name	jack9
+type	none
+health	100
+speed	10
+grabwalk 9
+mprate 1
+nolife 1
+chargerate 2
+shadow	3
+makeinv 4 
+running  20 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 2 3 4
+gfxshadow 1
+jumpheight 4
+bounce 1
+com u d j freespecial2
+com d u j freespecial4
+com d u a freespecial16
+com u d s freespecial3
+com b b s freespecial9
+com d u s freespecial18
+com d f a freespecial33
+com a2 freespecial22
+icon data/chars/jack/icon
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+diesound data/sounds/n/jkdie.wav
+projectilehit enemy obstacle
+animationscript data/scripts/clear.c
+anim spawn
+	@cmd clearL
+	offset	72 140
+	delay 70
+	bbox  0 0 0 0
+	frame	data/chars/misc/empty
+	delay 200
+	bbox	57 43 27 73
+	frame	data/chars/jack/001
+	delay 15
+	frame	data/chars/jack/002
+	frame	data/chars/jack/003
+	frame	data/chars/jack/004
+	delay 1
+	@cmd shoot "cape3" -30 66 -2
+	frame	data/chars/jack/006
+anim respawn
+	@cmd clearL
+	offset	72 140
+	delay 70
+	bbox  0 0 0 0
+	frame	data/chars/misc/empty
+	delay 200
+	bbox	57 43 27 73
+	frame	data/chars/jack/001
+	delay 20
+	frame	data/chars/jack/002
+	frame	data/chars/jack/003
+	frame	data/chars/jack/004
+	delay 1
+	@cmd shoot "cape3" -30 66 -2
+	frame	data/chars/jack/006
+anim idle     
+	weaponframe 0 0
+	loop	1
+	offset	72 140
+	delay 20
+	bbox	0 0 0 0
+	frame	data/chars/jack/007
+	bbox	57 43 27 73
+	frame	data/chars/jack/008
+	frame	data/chars/jack/009
+	frame	data/chars/jack/006
+	frame	data/chars/jack/009
+	frame	data/chars/jack/008
+anim walk   
+	weaponframe 0 0
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	frame	data/chars/jack/010
+	bbox	57 43 27 73
+	frame	data/chars/jack/011
+	frame	data/chars/jack/012
+	frame	data/chars/jack/013
+	frame	data/chars/jack/014
+	frame	data/chars/jack/015
+	frame	data/chars/jack/016
+	frame	data/chars/jack/017

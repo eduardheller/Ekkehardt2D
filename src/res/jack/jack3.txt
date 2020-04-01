@@ -1,0 +1,359 @@
+name	jack3
+health	100
+speed	10
+nolife 1
+holdblock 1
+type	none
+shadow	3
+makeinv 4 
+running  20 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 1 1 1
+gfxshadow 1
+jumpheight 4
+bounce 1
+com u d s freespecial3
+com a2 freespecial22
+icon data/chars/jack/icon
+animationscript data/scripts/playerb.c 
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+anim spawn
+	offset	72 140
+	delay 20
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/01
+anim idle    
+	loop	1
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/01
+anim walk
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/07
+	frame	data/chars/jack/jkshg/08
+	frame	data/chars/jack/jkshg/09
+	frame	data/chars/jack/jkshg/10
+	frame	data/chars/jack/jkshg/03
+	frame	data/chars/jack/jkshg/04
+	frame	data/chars/jack/jkshg/05
+	frame	data/chars/jack/jkshg/06
+anim run
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/12
+	frame	data/chars/jack/jkshg/13
+	frame	data/chars/jack/jkshg/14
+	frame	data/chars/jack/jkshg/15
+	frame	data/chars/jack/jkshg/16
+	frame	data/chars/jack/jkshg/17
+	frame	data/chars/jack/jkshg/18
+	frame	data/chars/jack/jkshg/11
+anim runattack
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	@cmd velo001 2 0 0
+	frame	data/chars/jack/jkshg/19
+	frame	data/chars/jack/jkshg/20
+	sound   data/sounds/punch2.wav
+	blast   82 13 56 93 10 0 0 30
+	@cmd velo001 1.5 0 0
+	frame	data/chars/jack/jkshg/21
+	@cmd velo001 1 0 0
+	frame	data/chars/jack/jkshg/23
+	blast   0 0 0 0
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jack/jkshg/24
+	@cmd velo001 0 0 0
+	frame	data/chars/jack/jkshg/24
+anim attackbackward
+anim attack1
+	@script
+	void self = getlocalvar("self");
+	void vAniPos = getentityproperty(self, "animpos");
+	void target = findtarget(self);
+	void eAniID = getentityproperty(target, "animationID");
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+	if(eAniID == openborconstant("ANI_FALL") || eAniID == openborconstant("ANI_RISE") || eAniID == openborconstant("ANI_FALL5") || eAniID == openborconstant("ANI_FALL8") || eAniID == openborconstant("ANI_RISE")){
+	if(z1-z2<20 && z1-z2>-20 && x1-x2>-100 && x1-x2<100){
+	if(playerkeys(getentityproperty(self, "playerindex"), 0, "movedown")){
+	changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL11"));
+	}
+	if(playerkeys(getentityproperty(self, "playerindex"), 0, "moveup")){
+	changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL14"));
+	}
+	}
+	}
+	}
+	@end_script
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	shootframe 2 86
+	sound   data/sounds/reload.wav
+	frame	data/chars/jack/jkshg/02
+	delay 5
+	frame	data/chars/jack/jkshg/01
+	delay 1
+	move -1
+	sound data/sounds/shtgun2.wav
+	@cmd shoot "shdym" 52 80 0
+	@cmd shoot "shbul" 52 80 0
+	frame	data/chars/jack/jkshg/01
+	move 1
+	delay 39
+	@cmd toss "shel" 18 80 0
+	frame	data/chars/jack/jkshg/01
+anim attack2
+anim attack3
+anim attack4
+anim attackdown
+anim attackup
+anim special2
+anim special3
+	energycost 20
+	offset	72 140
+	delay 3
+	dive 0 -1
+	bbox	60 47 25 69
+	spawnframe 14 0 120 0 1
+	subentity jkpmg
+	frame	data/chars/jack/e01
+	frame	data/chars/jack/e02
+	frame	data/chars/jack/e03
+	frame	data/chars/jack/e04
+	frame	data/chars/jack/e05
+	frame	data/chars/jack/e06
+	frame	data/chars/jack/e07
+	frame	data/chars/jack/e08
+	frame	data/chars/jack/e09
+	frame	data/chars/jack/e10
+	frame	data/chars/jack/e11
+	frame	data/chars/jack/e12
+	frame	data/chars/jack/e13
+	frame	data/chars/jack/e14
+	delay 1
+	sound   data/sounds/okrz.wav
+	frame	data/chars/jack/e15
+	delay 5
+	frame	data/chars/jack/e15
+	@cmd spawner "jkspa"  4 90 1
+	hitflash bblod
+	blast  -1000 -1000 2000 2000 50 1 0 10 1000
+	otg 1
+	frame	data/chars/jack/e16
+	sound   data/sounds/bosfinsh.wav
+	@cmd ani001 "ANI_JUMP" 2
+	frame	data/chars/jack/e16
+anim jumpdelay
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/26
+anim jumpland
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/26
+anim jump
+	offset	72 140
+	delay 15
+	dropframe 2
+	bbox	59 50 29 58
+	frame	data/chars/jack/jkshg/27
+	frame	data/chars/jack/jkshg/28
+	frame	data/chars/jack/jkshg/29
+	frame	data/chars/jack/jkshg/28
+	delay   1000
+	frame	data/chars/jack/jkshg/27
+anim forwardjump
+	offset	72 140
+	delay 15
+	dropframe 2
+	bbox	59 50 29 58
+	frame	data/chars/jack/jkshg/27
+	frame	data/chars/jack/jkshg/28
+	frame	data/chars/jack/jkshg/29
+	frame	data/chars/jack/jkshg/28
+	delay   1000
+	frame	data/chars/jack/jkshg/27
+anim runjump
+	offset	72 140
+	delay 15
+	dropframe 2
+	bbox	59 50 29 58
+	frame	data/chars/jack/jkshg/27
+	frame	data/chars/jack/jkshg/28
+	frame	data/chars/jack/jkshg/29
+	frame	data/chars/jack/jkshg/28
+	delay   1000
+	frame	data/chars/jack/jkshg/27
+anim runjumpattack
+	offset	72 140
+	delay 10
+	bbox	41 61 44 39
+	frame	data/chars/jack/jkshg/30
+	delay   1000
+	sound   data/sounds/punch2.wav
+	attack  69 70 65 44 6 1 0 0 20
+	frame	data/chars/jack/jkshg/31
+anim jumpforward
+	offset	72 140
+	delay 10
+	bbox	41 61 44 39
+	frame	data/chars/jack/jkshg/30
+	delay   1000
+	sound   data/sounds/punch2.wav
+	attack  69 70 65 44 6 1 0 0 20
+	frame	data/chars/jack/jkshg/31
+anim jumpattack2
+	offset	72 140
+	delay 10
+	dive  2 3
+	bbox	41 61 44 39
+	frame	data/chars/jack/jkshg/30
+	delay   1000
+	sound   data/sounds/punch2.wav
+	attack  69 70 65 44 6 1 0 0 20
+	frame	data/chars/jack/jkshg/31
+anim jumpattack3
+	offset	72 140
+	delay 10
+	bbox	41 61 44 39
+	frame	data/chars/jack/jkshg/30
+	delay   1000
+	sound   data/sounds/punch2.wav
+	attack  69 70 65 44 6 1 0 0 20
+	frame	data/chars/jack/jkshg/31
+anim grab
+anim jumpattack
+	offset	72 140
+	delay 10
+	bbox	41 61 44 39
+	frame	data/chars/jack/jkshg/30
+	delay   1000
+	sound   data/sounds/punch2.wav
+	attack  69 70 65 44 6 1 0 0 20
+	frame	data/chars/jack/jkshg/31
+anim grabattack2
+anim throw
+anim grabdown
+anim grabup
+anim grabforward
+anim grabforward2
+anim land
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/26
+anim block
+	loop 1
+	counterframe 0 1 0
+	followanim 1
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkshg/25
+anim follow1
+	offset	71 140
+	delay 5
+	bbox	57 43 27 73
+	sound data/sounds/block.wav
+	frame	data/chars/jack/jkshg/25
+	offset	72 140
+	frame	data/chars/jack/jkshg/25
+	offset	71 140
+	frame	data/chars/jack/jkshg/25
+	@cmd velo001 -2 0 0
+	offset	72 140
+	@cmd shoot "dust" 0 0 1
+	frame	data/chars/jack/jkshg/25
+	frame	data/chars/jack/jkshg/25
+	@cmd velo001 -1.6 0 0
+	frame	data/chars/jack/jkshg/25
+	frame	data/chars/jack/jkshg/25
+	@cmd velo001 -1.2 0 0
+	frame	data/chars/jack/jkshg/25
+	frame	data/chars/jack/jkshg/25
+	@cmd velo001 -0.8 0 0
+	frame	data/chars/jack/jkshg/25
+	frame	data/chars/jack/jkshg/25
+	@cmd velo001 -0.4 0 0
+	frame	data/chars/jack/jkshg/25
+	frame	data/chars/jack/jkshg/25
+	@cmd velo001 0 0 0
+	delay   10
+	frame	data/chars/jack/jkshg/25
+anim follow2
+anim follow5
+anim follow6
+anim follow6
+anim follow8
+anim follow7
+anim freespecial2
+anim freespecial4
+anim freespecial11      
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	shootframe 3 86
+	sound   data/sounds/reload.wav
+	frame	data/chars/jack/jkshg/a2
+	frame	data/chars/jack/jkshg/a1
+	delay 5
+	delay 1
+	move -1
+	sound data/sounds/shtgun2.wav
+	frame	data/chars/jack/jkshg/a2
+	move 1
+	delay 39
+	hitflash bblod
+	@cmd toss "shbul6" 43 35 0
+	@cmd toss "shdym6" 43 35 0
+	@cmd toss "shel" 18 54 0
+	frame	data/chars/jack/jkshg/a2
+anim freespecial14
+	offset	72 140
+	delay 10
+	dropframe 2
+	landframe 3
+	hitflash bblod
+	bbox	59 50 29 58
+	jumpframe 0 3 1 0
+	frame	data/chars/jack/jkshg/27
+	frame	data/chars/jack/jkshg/28
+	delay   1000
+	frame	data/chars/jack/jkshg/29
+	delay 10
+	bbox	57 43 27 73
+	attack3 64 132 17 11 10 1 0 0 30
+	otg 1
+	dropv 2 1
+	frame	data/chars/jack/jkshg/26
+anim freespecial16
+anim freespecial23
+anim freespecial22
+	delay 10
+	offset	72 140
+	bbox	0 0 0 0
+	weaponframe 2 0
+	frame	data/chars/jack/150
+	frame	data/chars/jack/151
+	frame	data/chars/jack/151

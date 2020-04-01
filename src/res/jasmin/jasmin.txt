@@ -1,0 +1,1995 @@
+name	Jasmin
+health	100
+speed	12
+mprate 1
+nolife 1
+chargerate 2
+type	player
+shadow	3
+makeinv 4 
+running  24 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 2 3 4
+gfxshadow 1
+jumpheight 4
+bounce 1
+weapons Jas2 Jas3 Jas4 Jas5 Jas6 Jas7 Jas8 Jas12 Jas10 Jas11 Jasmin
+com d d j freespecial33
+com u u j freespecial34
+com d u a freespecial16
+com u d s freespecial3
+com b b s freespecial9
+com d u s freespecial18
+com d f a freespecial24
+com d d a freespecial35
+com u u a freespecial36
+com a2 freespecial22
+icon data/chars/jasmin/icon
+animationscript data/scripts/player.c 
+ondeathscript data/scripts/death.c
+keyscript data/scripts/keych.c
+didhitscript data/scripts/hit1.c 
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+diesound   data/sounds/camdie.wav
+projectilehit enemy npc obstacle
+candamage npc enemy obstacle
+palette data/chars/misc/z1
+anim spawn
+	offset	76 143
+	delay 230
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/a1
+	delay 15
+	frame	data/chars/jasmin/a2
+	frame	data/chars/jasmin/a3
+	frame	data/chars/jasmin/a4
+	delay 1
+	@cmd shoot "cape2" -4 44 0
+	frame	data/chars/jasmin/001
+anim respawn
+	offset	76 143
+	delay 50
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/037
+	delay 15
+	frame	data/chars/jasmin/038
+	frame	data/chars/jasmin/039
+	frame	data/chars/jasmin/040
+anim burn
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	landframe 15
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	delay 30
+	offset	76 143
+	frame	data/chars/jasmin/032
+anim bdie
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	jumpframe 0 3 -1 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	delay 30
+	offset	76 143
+	frame	data/chars/jasmin/032
+anim sdie
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	jumpframe 0 3 -1 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	delay 30
+	offset	76 143
+	frame	data/chars/jasmin/032
+anim shock
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	delay 30
+	offset	76 143
+	frame	data/chars/jasmin/032
+anim idle 
+	@cmd    clearL            
+	loop	1
+	offset	76 143
+	delay 150
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/001
+	delay 20
+	frame	data/chars/jasmin/001a
+	delay 200
+	frame	data/chars/jasmin/001
+	delay 20
+	frame	data/chars/jasmin/001a
+	delay 200
+	frame	data/chars/jasmin/001
+	delay  1000
+	frame	data/chars/jasmin/161
+anim walk 
+	@cmd    clearL    
+	loop	1
+	delay 12
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/006
+	frame	data/chars/jasmin/007
+	frame	data/chars/jasmin/002
+	frame	data/chars/jasmin/003
+	frame	data/chars/jasmin/004
+	frame	data/chars/jasmin/005
+anim waiting
+	loop 1
+	offset	45 312
+	delay 200
+	frame	data/chars/jasmin/selb1
+anim waiting
+	loop 1
+	offset	71 290
+	delay 200
+	frame	data/chars/misc/za1
+anim select
+	offset	71 290
+	delay 5
+	sound data/sounds/n/castundr.wav
+	frame	data/chars/misc/z1
+	frame	data/chars/misc/za1
+	frame	data/chars/misc/z1
+	frame	data/chars/misc/za1
+	frame	data/chars/misc/z1
+	frame	data/chars/misc/za1
+	frame	data/chars/misc/z1
+	frame	data/chars/misc/za1
+	delay 50
+	frame	data/chars/misc/z1
+anim run
+	loop	1
+	offset	76 143
+	delay 11
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/012
+	frame	data/chars/jasmin/052 
+	frame	data/chars/jasmin/008
+	frame	data/chars/jasmin/009
+	frame	data/chars/jasmin/010
+	frame	data/chars/jasmin/011
+anim runattack
+	@script
+	void self = getlocalvar("self");
+	void target = findtarget(self);
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+		if(z1-z2<15 && z1-z2>-15 && x1-x2>-70 && x1-x2<70){
+			changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL12"));
+		}
+	}
+	@end_script
+	delay 10
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 0 2.5 2 0
+	landframe 5
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/130
+	frame	data/chars/jasmin/131
+	frame	data/chars/jasmin/132
+	delay 15
+	blast   74 80 66 26 15 1 0 20
+	frame	data/chars/jasmin/133
+	delay 1000
+	blast   0 0 0 0
+	frame	data/chars/jasmin/096
+	delay 10
+	@cmd shoot "dust" 10 1 0
+	@cmd velo001 1.5 0 0
+	frame	data/chars/jasmin/035
+	@cmd velo001 1 0 0
+	frame	data/chars/jasmin/035
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/035
+anim get
+	delay 10
+	offset	76 143
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/025
+	frame	data/chars/jasmin/045
+	frame	data/chars/jasmin/025
+anim attackbackward
+	delay 8
+	offset	76 143
+	bbox	60 47 25 69
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/b1
+	delay   5
+	hitflash flash
+	attack5  19 45 50 63 10 1 0 0 30
+	dropv 4.5 0.5
+	frame	data/chars/jasmin/b2
+	hitflash smash
+	attack5  19 45 50 63 20 1 0 0 30
+	dropv 5 0.5
+	frame	data/chars/jasmin/b2
+	delay 10
+	attack5  0 0 0 0
+	frame	data/chars/jasmin/b1
+anim attack1
+	@script
+	void self = getlocalvar("self");
+	void vAniPos = getentityproperty(self, "animpos");
+	void target = findtarget(self);
+	void eAniID = getentityproperty(target, "animationID");
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+		if(eAniID == 5 || eAniID == 6){
+			if(z1-z2<20 && z1-z2>-20 && x1-x2>-80 && x1-x2<80){
+				if(playerkeys(getentityproperty(self, "playerindex"), 0, "movedown")){
+					changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL11"));
+				}
+			}
+			if(z1-z2<20 && z1-z2>-20 && x1-x2>-100 && x1-x2<100){
+				if(playerkeys(getentityproperty(self, "playerindex"), 0, "moveup")){
+					changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL14"));
+				}
+			}
+		}
+	}
+	@end_script
+	offset	76 143
+	bbox	60 47 25 69
+	hitfx data/sounds/beatb.wav
+	sound   data/sounds/punch2.wav
+	delay 3
+	frame	data/chars/jasmin/077
+	delay 2
+	frame	data/chars/jasmin/078
+	delay 1
+	hitflash flash
+	attack2 85 72 63 18 6 0 0 0 6
+	frame	data/chars/jasmin/079
+	hitflash smash
+	delay 6
+	attack 85 48 63 38 20 0 0 0 9
+	frame	data/chars/jasmin/079
+	delay 2
+	attack2  0 0 0 0
+	frame	data/chars/jasmin/078
+	delay 3
+	frame	data/chars/jasmin/077
+anim attack2
+	delay 6
+	offset	76 143
+	bbox	60 47 25 69
+	hitfx data/sounds/beatc.wav
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/081
+	attack  0 0 0 0
+	frame	data/chars/jasmin/082
+	attack  85 53 63 36 8 0 0 0 12
+	frame	data/chars/jasmin/083
+	attack  0 0 0 0
+	frame	data/chars/jasmin/084
+anim attack3
+	delay 6
+	offset	76 143
+	bbox	60 47 25 69
+	hitfx data/sounds/beatc.wav
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/085
+	frame	data/chars/jasmin/086
+	frame	data/chars/jasmin/087
+	attack  85 50 63 38 8 0 0 0 12
+	frame	data/chars/jasmin/088
+	attack  0 0 0 0
+	frame	data/chars/jasmin/089
+	attack  85 50 63 38 8 0 0 0 16
+	frame	data/chars/jasmin/090
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/091
+anim attack4
+	delay 1
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 1 2 1 0
+	landframe 6
+	@cmd    keyint "ANI_FREESPECIAL16" 0 "UA" 0 200
+	@cmd    keyint "ANI_FREESPECIAL28" 0 "DA" 0 200
+	frame	data/chars/jasmin/091
+	delay 8
+	frame	data/chars/jasmin/092
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/093
+	frame	data/chars/jasmin/094
+	hitflash flashe
+	delay   15
+	attack3  74 54 61 48 15 1 0 0 15
+	dropv 2 3
+	frame	data/chars/jasmin/095
+	attack3  0 0 0 0 
+	frame	data/chars/jasmin/096
+	delay  1
+	frame	data/chars/jasmin/001
+anim special
+	delay 5
+	offset	76 143
+	bbox	0 0 0 0
+	energycost 5
+	hitflash dflash
+	hitfx   data/sounds/empty.wav
+	sound data/sounds/madchic.wav
+	frame	data/chars/jasmin/019
+	frame	data/chars/jasmin/021
+	delay 3
+	offset	42 133
+	frame	data/chars/jasmin/c01
+	offset 156 193
+	frame	data/chars/bosf/exp01
+	offset	42 133
+	frame	data/chars/jasmin/c03
+	offset 156 193
+	frame	data/chars/bosf/exp02
+	offset	42 133
+	frame	data/chars/jasmin/c05
+	offset 156 193
+	frame	data/chars/bosf/exp03
+	offset	42 133
+	frame	data/chars/jasmin/c07
+	offset 156 193
+	shock  11 8 269 184 20 1 1 0 0 10
+	dropv 3 2
+	otg 1
+	frame	data/chars/bosf/exp04
+	offset	42 133
+	frame	data/chars/jasmin/c09
+	offset 156 193
+	frame	data/chars/bosf/exp05
+	offset	42 133
+	frame	data/chars/jasmin/c11
+	offset 156 193
+	frame	data/chars/bosf/exp06
+	offset	42 133
+	frame	data/chars/jasmin/c01
+	offset 156 193
+	frame	data/chars/bosf/exp07
+	offset	42 133
+	frame	data/chars/jasmin/c03
+	offset 156 193
+	frame	data/chars/bosf/exp08
+	offset	42 133
+	frame	data/chars/jasmin/c05
+	offset 156 193
+	frame	data/chars/bosf/exp09
+	offset	42 133
+	frame	data/chars/jasmin/c07
+	offset 156 193
+	frame	data/chars/bosf/exp10
+	offset	42 133
+	frame	data/chars/jasmin/c09
+	offset 156 193
+	frame	data/chars/bosf/exp11
+	offset	42 133
+	frame	data/chars/jasmin/c11
+	offset 156 193
+	frame	data/chars/bosf/exp12
+	offset	42 133
+	frame	data/chars/jasmin/c01
+	offset 156 193
+	frame	data/chars/bosf/exp13
+	offset	42 133
+	frame	data/chars/jasmin/c03
+	offset 156 193
+	frame	data/chars/bosf/exp14
+	offset	42 133
+	frame	data/chars/jasmin/c05
+	offset 156 193
+	frame	data/chars/bosf/exp15
+	offset	42 133
+	frame	data/chars/jasmin/c07
+	offset 156 193
+	frame	data/chars/bosf/exp16
+	offset	42 133
+	frame	data/chars/jasmin/c09
+	offset 156 193
+	frame	data/chars/bosf/exp17
+	offset	42 133
+	frame	data/chars/jasmin/c11
+anim special2
+	delay 30
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 2 0 2 0
+	landframe 5
+	frame	data/chars/jasmin/207
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL32" 0 "S" 0 200
+	frame	data/chars/jasmin/207
+	delay 10
+	frame	data/chars/jasmin/199
+	frame	data/chars/jasmin/200
+	attack    0 0 0 0
+	delay 10
+	sound   data/sounds/punch2.wav
+	attack    78 77 44 11 10 1 0 0 20
+	dropv 3 2
+	frame	data/chars/jasmin/201
+	@cmd velo001 1.5 0 0
+	attack    78 77 44 11 8 1 0 0 20
+	dropv 3 1.5
+	frame	data/chars/jasmin/201
+	@cmd velo001 1 0 0
+	attack    78 77 44 11 6 1 0 0 20
+	dropv 3 1
+	frame	data/chars/jasmin/201
+	attack    78 77 44 11 4 0 0 0 20
+	dropv 3 0.5
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/201
+anim special3
+	energycost 20
+	offset	76 143
+	delay 5
+	dive 0 -1
+	bbox	60 47 25 69
+	spawnframe 7 0 120 0 1
+	subentity jaspmg
+	hitfx   data/sounds/empty.wav
+	frame	data/chars/jasmin/188
+	frame	data/chars/jasmin/188
+	frame	data/chars/jasmin/188
+	frame	data/chars/jasmin/189
+	frame	data/chars/jasmin/189
+	frame	data/chars/jasmin/190
+	frame	data/chars/jasmin/190
+	delay 1
+	frame	data/chars/jasmin/190
+	@cmd spawner "jasspa"  0 -1 1
+	hitflash dflash 
+        hitfx data/sounds/empty.wav
+	burn  -1000 -1000 2000 2000 50 1 0 0 10 1000
+	otg 1
+	frame	data/chars/jasmin/190
+	sound   data/sounds/bosfinsh.wav
+	@cmd ani001 "ANI_JUMP" 2
+	frame	data/chars/jasmin/190
+anim jumpdelay
+	delay 10
+	offset	76 143
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/051
+anim jumpland
+	delay 10
+	offset	76 143
+	bbox	0 0 0 0
+	cancel 0 3 0 d f a freespecial24
+	frame	data/chars/jasmin/051
+anim jump
+	delay 20
+	dropframe 1
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/056
+	delay  20
+	frame	data/chars/jasmin/057
+	delay 1000
+	frame	data/chars/jasmin/058
+anim forwardjump
+	offset	76 143
+	delay 20
+	dropframe 1
+	bbox	56 67 38 37
+	frame	data/chars/jasmin/059
+	delay 20
+	frame	data/chars/jasmin/057
+	delay     1000
+	frame	data/chars/jasmin/061
+anim runjump
+	offset	76 143
+	delay 10
+	bbox	56 67 38 37
+	frame	data/chars/jasmin/067
+	frame	data/chars/jasmin/066
+	frame	data/chars/jasmin/065
+	frame	data/chars/jasmin/064
+	frame	data/chars/jasmin/063
+	frame	data/chars/jasmin/062
+	frame	data/chars/jasmin/061
+	delay 1000
+	frame	data/chars/jasmin/060
+anim runjumpattack
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/183
+	sound   data/sounds/punch2.wav
+	attack5 10 83 127 14 10 1 0 0 25
+	frame	data/chars/jasmin/184
+	attack5  0 0 0 0 0
+	frame	data/chars/jasmin/185
+	frame	data/chars/jasmin/186
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 25
+	delay 1000
+	frame	data/chars/jasmin/187
+anim jumpattack
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/173
+	delay 5
+	frame	data/chars/jasmin/174
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack2 74 72 33 32 20 1 0 0 30
+	frame	data/chars/jasmin/175
+anim jumpforward
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/123
+	frame	data/chars/jasmin/125
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack 78 83 58 22 10 1 0 0 20
+	frame	data/chars/jasmin/124
+anim jumpattack2
+	offset	76 143
+	delay 10
+	followcond 3
+	followanim 7
+	bbox	60 47 25 69
+	dive 2 2
+	attack  58 107 25 26 6 0 0 0 20
+	otg 1
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/118
+anim follow7
+	offset	76 143
+	delay 20
+	bbox	56 67 38 37
+	jumpframe 0 3 2 0
+	landframe 4
+	frame	data/chars/jasmin/059
+	delay 20
+	frame	data/chars/jasmin/057
+	delay 10
+	@cmd    keyint "ANI_JUMPATTACK3" 0 "UA" 0 200
+	@cmd    keyint "ANI_JUMPATTACK2" 0 "DA" 0 200
+	frame	data/chars/jasmin/057
+	delay 1000
+	frame	data/chars/jasmin/058
+	delay 20
+	frame	data/chars/jasmin/051
+anim jumpattack3
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	dive  2 3
+	frame	data/chars/jasmin/125
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack3 82 73 48 38 6 1 0 0 20
+	otg 1
+	frame	data/chars/jasmin/126  
+anim grab
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/139
+anim grabattack
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/140
+	attack2  94 75 31 17 10 0 0 0 20
+	frame	data/chars/jasmin/141
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/140
+anim grabattack2
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	jumpframe 3 4 0.5 0
+	landframe 9
+	attackone 0
+	@cmd    keyint "ANI_FREESPECIAL16" 0 "DJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL24" 0 "UJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL29" 0 "FJ" 0 25
+	@cmd    keyint "ANI_FREESPECIAL30" 0 "BJ" 0 25
+	@cmd    keyint "ANI_FREESPECIAL26" 0 "J" 0 25
+	@cmd    keyint "ANI_FREESPECIAL17" 0 "FJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL27" 0 "BJ" 0 200
+	frame	data/chars/jasmin/191
+	frame	data/chars/jasmin/192
+	frame	data/chars/jasmin/193
+	attack5 91 38 32 61 15 1 0 0 0 15
+	dropv 4 1
+	frame	data/chars/jasmin/194
+	attack5 0 0 0 0 0
+	frame	data/chars/jasmin/195
+	attack5 91 38 32 61 15 1 0 0 0 15
+	dropv 4 2
+	frame	data/chars/jasmin/196
+	attack 0 0 0 0 0
+	frame	data/chars/jasmin/197
+	frame	data/chars/jasmin/198
+	delay 1000
+	frame	data/chars/jasmin/061
+	delay 15
+	frame	data/chars/jasmin/051
+anim grabup
+	offset	76 143
+	delay 8
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/142
+	frame	data/chars/jasmin/143
+	attack2  94 75 31 17 10 0 0 0 20
+	frame	data/chars/jasmin/144
+	attack  0 0 0 0
+	frame	data/chars/jasmin/143
+anim grabup2
+	offset	76 143
+	delay 8
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/168
+	frame	data/chars/jasmin/169
+	frame	data/chars/jasmin/170
+	attack5  91 53 35 33 10 1 0 0 10
+	dropv 5 0.8
+	frame	data/chars/jasmin/171
+	delay 30
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/172
+	delay 5
+	frame	data/chars/jasmin/171
+anim grabdown
+	offset	76 143
+	delay 20
+	bbox	60 47 25 69
+	attack 0 0 0 0
+	frame	data/chars/jasmin/215
+	delay 10
+	attack2  88 57 20 34 10 0 0 0 20
+	frame	data/chars/jasmin/214
+anim grabdown2
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/136
+	frame	data/chars/jasmin/137
+	attack  98 62 45 19 10 1 0 0 20
+	dropv 3 1.5
+	frame	data/chars/jasmin/138
+	delay 5
+	attack  0 0 0 0
+	frame	data/chars/jasmin/137
+	frame	data/chars/jasmin/136
+anim grabforward
+	offset	76 143
+	delay 8
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/142
+	frame	data/chars/jasmin/143
+	attack2  94 75 31 17 10 0 0 0 20
+	frame	data/chars/jasmin/144
+	attack  0 0 0 0
+	frame	data/chars/jasmin/143
+anim grabforward2
+	offset	76 143
+	delay 8
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/142
+	frame	data/chars/jasmin/143
+	frame	data/chars/jasmin/144
+	delay 25
+	attack5  98 62 45 19 10 1 0 0 0 30
+	dropv 5 0.8
+	frame	data/chars/jasmin/145
+	attack  0 0 0 0
+	delay 10
+	frame	data/chars/jasmin/146
+	frame	data/chars/jasmin/147
+anim grabbackward
+	offset	76 143
+	delay 15
+	bbox	0 0 0 0
+	followcond 1
+	followanim 13
+	hitfx data/sounds/empty.wav
+	frame	data/chars/jasmin/046
+	delay 1
+	grabin 1 20
+	attack  108 77 14 16 0 0 1 1 
+	frame	data/chars/jasmin/046
+anim follow13
+	offset	76 143
+	delay   15
+	bbox	0 0 0 0
+	@cmd    hurt 0 7
+	@cmd    position 0 30 25 -1 -1
+	frame	data/chars/jasmin/047
+	@cmd    hurt 0 7
+	@cmd    position 1 0 90 -1 -1
+	frame	data/chars/jasmin/048
+	@cmd    flipdir
+	sound   data/sounds/kulahey.wav
+	@cmd    hurt 0 7
+	@cmd    position 1 0 90 -1 -1
+	frame	data/chars/jasmin/048
+	delay   15
+	@cmd    hurt 0 7
+	@cmd    position 1 40 80 -1 -1
+	frame	data/chars/jasmin/049
+	@cmd    hurt 1 8
+	delay   20
+	@cmd    depost 0
+	@cmd    throw 25 3 -2 0.5 0 0
+	frame	data/chars/jasmin/050
+	frame	data/chars/jasmin/050
+anim pain
+	offset	76 143
+	delay 2
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/027
+	delay 30
+	frame	data/chars/jasmin/028
+	delay 10
+	frame	data/chars/jasmin/027
+anim pain2
+	offset	76 143
+	delay 2
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/025
+	delay 30
+	frame	data/chars/jasmin/026
+	delay 10
+	frame	data/chars/jasmin/025
+anim fall
+	offset	76 143
+	delay 1000
+	landframe 3
+	dropframe 1
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/030
+	delay 10
+	@cmd recover
+	frame	data/chars/jasmin/030
+	delay 1000
+	frame	data/chars/jasmin/030
+	delay  10
+	frame	data/chars/jasmin/031
+	delay  30
+	frame	data/chars/jasmin/032
+anim fall6
+	offset	76 143
+	delay 1000
+	landframe 1
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/030
+	delay  10
+	frame	data/chars/jasmin/031
+	delay  30
+	frame	data/chars/jasmin/032
+anim fall7
+	offset	76 143
+	delay 1000
+	landframe 3
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/030
+	offset	76 133
+	frame	data/chars/jasmin/031
+	offset	76 143
+	frame	data/chars/jasmin/032
+	delay 10
+	frame	data/chars/jasmin/031
+	delay 30
+	frame	data/chars/jasmin/032
+anim fall8
+	offset	76 143
+	delay 1000
+	dropframe 5
+	landframe 6
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/029a
+	offset	76 133
+	frame	data/chars/jasmin/030
+	offset	76 143
+	frame	data/chars/jasmin/252
+	frame	data/chars/jasmin/032
+	frame	data/chars/jasmin/039
+	frame	data/chars/jasmin/030
+	delay  10
+	frame	data/chars/jasmin/031
+	delay  30
+	frame	data/chars/jasmin/032
+anim rise
+	offset	76 143
+	delay 15
+	bbox	0 0 0 0
+	frame	data/chars/jasmin/033
+	frame	data/chars/jasmin/034
+	frame	data/chars/jasmin/035
+anim land
+	offset	76 143
+	delay 10
+	bbox	0 0 0 0
+	flipframe 0
+	frame	data/chars/jasmin/053
+	move -10
+	frame	data/chars/jasmin/054
+	frame	data/chars/jasmin/055
+anim block
+	counterframe 0 1 0
+	followanim 4
+	delay 15
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/020
+	@cmd    keyint "ANI_FOLLOW3" 0 "S" 0 200
+	frame	data/chars/jasmin/020
+anim follow1
+	offset	77 143
+	delay 5
+	bbox	60 47 25 69
+	sound data/sounds/block.wav
+	frame	data/chars/jasmin/020
+	offset	76 143
+	frame	data/chars/jasmin/020
+	offset	77 143
+	frame	data/chars/jasmin/020
+	@cmd velo001 -2 0 0
+	offset	76 143
+	@cmd shoot "dust" 0 1 0
+	frame	data/chars/jasmin/020
+	frame	data/chars/jasmin/020
+	@cmd velo001 -1.6 0 0
+	frame	data/chars/jasmin/020
+	frame	data/chars/jasmin/020
+	@cmd velo001 -1.2 0 0
+	frame	data/chars/jasmin/020
+	frame	data/chars/jasmin/020
+	@cmd velo001 -0.8 0 0
+	frame	data/chars/jasmin/020
+	frame	data/chars/jasmin/020
+	@cmd velo001 -0.4 0 0
+	frame	data/chars/jasmin/020
+	frame	data/chars/jasmin/020
+	@cmd velo001 0 0 0
+	delay   10
+	frame	data/chars/jasmin/020
+anim follow3
+	counterframe 0 1 0
+	followanim 1
+	delay 1
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/020
+	@cmd    keyint "ANI_FOLLOW8" 0 "SB" 0 200
+	@cmd    keyint "ANI_FOLLOW5" 0 "S" 0 200
+	frame	data/chars/jasmin/020
+anim follow4
+	@script
+	void self = getlocalvar("self");
+	changeentityproperty(self, "aiflag", "idling", 0);
+	changeentityproperty(self, "aiflag", "walking", 0);
+	changeentityproperty(self, "aiflag", "blocking", 0);
+	changeentityproperty(self, "takeaction", "common_pain");
+	@end_script
+	offset	76 143
+	delay 1
+	bbox	0 0 0 0
+	jumpframe 2 0 3 0
+	landframe 3
+	spawnframe 0 10 0 1 0
+	subentity cntfl
+	frame	data/chars/jasmin/020
+	delay 10
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/229
+	delay 20
+	attack  89 66 29 38 2 1 0 0 10
+	dropv 3 2
+	frame	data/chars/jasmin/202
+	delay 10
+	@cmd velo001 1.5 0 0
+	attack  89 66 29 38 2 1 0 0 10
+	dropv 3 1.5
+	frame	data/chars/jasmin/202
+	@cmd velo001 1 0 0
+	attack  89 66 29 38 2 1 0 0 20
+	dropv 3 1
+	frame	data/chars/jasmin/202
+	@cmd velo001 0.5 0 0
+	attack  0 0 0 0 0
+	frame	data/chars/jasmin/202
+	@cmd velo001 0 0 0
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/001
+anim follow5
+	counterframe 0 1 0
+	followanim 1
+	delay 1
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/020
+	@cmd    keyint "ANI_FOLLOW8" 0 "SB" 0 200
+	@cmd    keyint "ANI_FOLLOW3" 0 "S" 0 200
+	frame	data/chars/jasmin/020
+anim follow8
+	offset	76 143
+	bbox	0 0 0 0
+	jumpframe 0 3 -2 0
+	landframe 6
+	delay 10
+	frame	data/chars/jasmin/101
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	frame	data/chars/jasmin/055
+	delay 20
+	frame	data/chars/jasmin/045
+anim freespecial17
+	offset	76 143
+	delay 15
+	jumpframe 1 4 1 0
+	attackone 1
+	dropframe 2
+	landframe 4
+	quakeframe 4 3 -3
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/jasmin/149
+	delay  1000
+	@cmd    hurt 0 7
+	@cmd    position 0 15 45 -1 -1
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/151
+	delay 10
+	@cmd    position 1 0 90 -1 1
+	frame	data/chars/jasmin/152
+	delay   1000
+	@cmd    position 1 -20 50 1 1
+	frame	data/chars/jasmin/153
+	delay 10
+	@cmd shoot "slamfl" 0 10 1
+	@cmd shoot "dust" 0 1 0
+	sound   data/sounds/bigfal.wav
+	@cmd    position 2 -10 0 1 1
+	frame	data/chars/jasmin/154
+	frame	data/chars/jasmin/154
+	frame	data/chars/jasmin/154
+	@cmd    depost 0
+	delay 30
+	@cmd    finish 50 3 -2 2 0 0
+	frame	data/chars/jasmin/154
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL34" 0 "U" 0 200
+	@cmd    keyint "ANI_FREESPECIAL33" 0 "D" 0 200
+	@cmd    keyint "ANI_FREESPECIAL8" 0 "F" 0 200
+	@cmd    keyint "ANI_FREESPECIAL7" 0 "B" 0 200
+	frame	data/chars/jasmin/154
+anim freespecial3
+	energycost 20
+	offset	76 143
+	delay 30
+	bbox	0 0 0 0
+	hitflash tdfl
+	fastattack 1
+	#hitfx data/sounds/lbhit.wav
+	spawnframe 12 160 240 0 1
+	subentity jasspb2
+	frame	data/chars/jasmin/207
+	delay  10
+	frame	data/chars/jasmin/206
+	frame	data/chars/jasmin/205
+	frame	data/chars/jasmin/204
+	delay  20
+	frame	data/chars/jasmin/203
+	delay  10
+	frame	data/chars/jasmin/204
+	frame	data/chars/jasmin/205
+	frame	data/chars/jasmin/206
+	frame	data/chars/jasmin/208
+	frame	data/chars/jasmin/209
+	frame	data/chars/jasmin/210
+	frame	data/chars/jasmin/211
+	delay   10
+	@cmd shoot "tdfl2" 0 1 0
+	attack2 -1000 -1000 2000 2000 50 1 1 0 20 1000
+	otg 1
+	frame	data/chars/jasmin/211
+	frame	data/chars/jasmin/211
+	frame	data/chars/jasmin/211
+	frame	data/chars/jasmin/211
+anim freespecial5
+	offset	76 143
+	delay 5
+	bbox	0 0 0 0
+	jumpframe 2 3 0 0.5
+	landframe 9
+	frame	data/chars/jasmin/033
+	frame	data/chars/jasmin/034
+	delay 9
+	frame	data/chars/jasmin/074
+	frame	data/chars/jasmin/073
+	frame	data/chars/jasmin/072
+	frame	data/chars/jasmin/071
+	frame	data/chars/jasmin/070
+	frame	data/chars/jasmin/069
+	frame	data/chars/jasmin/068
+	delay 20
+	frame	data/chars/jasmin/035
+anim freespecial6
+	offset	76 143
+	delay 5
+	bbox	0 0 0 0
+	jumpframe 2 3 0 -0.5
+	landframe 9
+	frame	data/chars/jasmin/033
+	frame	data/chars/jasmin/034
+	delay 9
+	frame	data/chars/jasmin/074
+	frame	data/chars/jasmin/073
+	frame	data/chars/jasmin/072
+	frame	data/chars/jasmin/071
+	frame	data/chars/jasmin/070
+	frame	data/chars/jasmin/069
+	frame	data/chars/jasmin/068
+	delay 20
+	frame	data/chars/jasmin/035
+anim freespecial8
+	offset	76 143
+	delay 5
+	bbox	0 0 0 0
+	jumpframe 2 3 2 0
+	landframe 10
+	frame	data/chars/jasmin/033
+	frame	data/chars/jasmin/034
+	delay 8
+	frame	data/chars/jasmin/067
+	frame	data/chars/jasmin/066
+	frame	data/chars/jasmin/065
+	frame	data/chars/jasmin/064
+	frame	data/chars/jasmin/063
+	frame	data/chars/jasmin/062
+	frame	data/chars/jasmin/061
+	frame	data/chars/jasmin/060
+	delay 20
+	frame	data/chars/jasmin/045
+anim freespecial7
+	offset	76 143
+	delay 5
+	bbox	0 0 0 0
+	jumpframe 2 3 -2 0
+	landframe 8
+	frame	data/chars/jasmin/033
+	frame	data/chars/jasmin/034
+	delay 10
+	frame	data/chars/jasmin/101
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	frame	data/chars/jasmin/055
+	delay 20
+	frame	data/chars/jasmin/045
+anim freespecial9
+	offset	76 143
+	bbox	0 0 0 0
+	jumpframe 0 3 -2 0
+	landframe 6
+	delay 10
+	frame	data/chars/jasmin/101
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	frame	data/chars/jasmin/055
+	delay 20
+	frame	data/chars/jasmin/045
+anim follow10
+	offset	76 143
+	delay 5
+	bbox	0 0 0 0
+	jumpframe 3 0 2 0
+	landframe 11
+	flipframe 13
+	frame	data/chars/jasmin/218
+	frame	data/chars/jasmin/219
+	attack    57 82 46 16 6 0 0 0 10
+	frame	data/chars/jasmin/220
+	attack   0 0 0 0 
+	frame	data/chars/jasmin/221
+	frame	data/chars/jasmin/222
+	attack    0 75 56 17 6 1 0 0 10
+	frame	data/chars/jasmin/223
+	attack    0 0 0 0 0
+	frame	data/chars/jasmin/224
+	frame	data/chars/jasmin/225
+	attack    54 73 53 20 6 1 0 0 10
+	frame	data/chars/jasmin/226
+	attack    0 0 0 0
+	frame	data/chars/jasmin/227
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	delay 10
+	frame	data/chars/jasmin/219
+	frame	data/chars/jasmin/218
+	frame	data/chars/jasmin/035
+anim freespecial11
+	delay 10
+	offset	76 143
+	bbox	60 47 25 69
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/144
+	frame	data/chars/jasmin/146
+	attack3 81 83 29 57 10 1 1 0 30
+	otg 1
+	dropv 2 1
+	frame	data/chars/jasmin/147
+anim freespecial12
+	offset	76 146
+	delay 15
+	bbox	0 0 0 0
+	@cmd velo001 2 0 0
+	frame	data/chars/jasmin/176
+	delay 7
+	bbox	60 47 25 69
+	blast   72 76 44 17 10 1 0 30
+	sound   data/sounds/punch2.wav
+	frame	data/chars/jasmin/177
+	hitflash smash
+	frame	data/chars/jasmin/177
+	blast 0 0 0 0 0
+	delay 10
+	@cmd velo001 1.5 0 0
+	frame	data/chars/jasmin/178
+	@cmd velo001 1 0 0 
+	frame	data/chars/jasmin/178
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/178
+anim follow14
+	offset	76 146
+	delay 10
+	bbox 0 0 0 0
+	@cmd norun
+	jumpframe 1 4 1.5 0
+	dropframe 3
+	landframe 5
+	@cmd hurt 1 7
+	@cmd    position 1 20 90 -1 -1
+	frame	data/chars/jasmin/149
+	delay 1000
+	@cmd hurt 0 7
+	@cmd    position 1 -20 90 -1 -1
+	frame	data/chars/jasmin/147
+	delay 10
+	@cmd    hurt 0 7
+	@cmd    position 1 30 30 -1 -1
+	frame	data/chars/jasmin/150
+	delay 1
+	@cmd    depost 0
+	@cmd    finish 25 3 -2 0.5 0 0
+	frame	data/chars/jasmin/150
+	delay 10000
+	frame	data/chars/jasmin/150
+	delay 10
+	@cmd velo001 1 0 0
+	frame	data/chars/jasmin/150
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/150       
+anim freespecial14
+	offset	76 143
+	delay 10
+	landframe 4
+	jumpframe 0 2 1 0
+	bbox	59 50 29 58
+	hitflash bblod
+	frame	data/chars/jasmin/055
+	frame	data/chars/jasmin/197
+	frame	data/chars/jasmin/198
+	delay 1000
+	frame	data/chars/jasmin/051
+	delay 20
+	bbox	57 43 27 73
+	attack3 61 123 26 12 10 1 0 0 30
+	otg 1
+	dropv 2 1
+	frame	data/chars/jasmin/051
+anim freespecial16
+	delay 10
+	offset	76 143
+	jumpframe 1 3 0.3 0
+	bbox	60 47 25 69
+	landframe 7 
+	cancel 7 9 0 d f a freespecial24
+	frame	data/chars/jasmin/099
+	delay 8
+	attack5  73 79 47 33 10 1 1 0 20
+	otg 1
+	dropv 5 0.5
+	frame	data/chars/jasmin/101
+	attack  0 0 0 0
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	delay  1000
+	frame	data/chars/jasmin/099
+	delay 5
+	frame	data/chars/jasmin/051
+	frame	data/chars/jasmin/051	
+anim freespecial18
+	offset	76 143
+	delay 30
+	jumpframe 1 3 0 0
+	bbox	0 0 0 0
+	energycost 10
+	frame	data/chars/jasmin/051
+	delay  30
+	frame	data/chars/jasmin/180
+	delay 1
+	@cmd ani001 "ANI_FREESPECIAL19" 0
+	frame	data/chars/jasmin/180
+anim freespecial19
+	offset	76 143
+	delay 3
+	dive 0 -1
+	bbox	0 0 0 0
+        @cmd keycheck
+	frame	data/chars/jasmin/114
+	attack  74 62 57 62 2 0 0 0 5 20
+	frame	data/chars/jasmin/115
+	attack   0 0 0 0
+	frame	data/chars/jasmin/116
+	@cmd flipdir
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/116
+	attack  74 62 57 62 2 0 0 0 5 20
+	frame	data/chars/jasmin/115
+	attack   0 0 0 0
+	frame	data/chars/jasmin/114
+	@cmd flipdir
+	frame	data/chars/jasmin/114
+	attack  74 62 57 62 2 0 0 0 5 20
+	frame	data/chars/jasmin/115
+	attack   0 0 0 0
+	frame	data/chars/jasmin/116
+	@cmd flipdir
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/116
+	attack  74 62 57 62 2 0 0 0 5 20
+	frame	data/chars/jasmin/115
+	attack   0 0 0 0
+	frame	data/chars/jasmin/114
+	@cmd flipdir
+	frame	data/chars/jasmin/114
+	attack  74 62 57 62 2 0 0 0 5 20
+	frame	data/chars/jasmin/115
+	attack   0 0 0 0
+	frame	data/chars/jasmin/116
+	@cmd flipdir
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/116
+	attack  74 62 57 62 2 0 0 0 5 20
+	frame	data/chars/jasmin/115
+	attack   0 0 0 0
+	frame	data/chars/jasmin/114
+	@cmd flipdir
+	offset 76 138
+	attack  0 0 0 0 
+	delay 5
+	frame	data/chars/jasmin/183
+	attack5  23 55 53 58 2 0 0 0 5 20
+	frame	data/chars/jasmin/182
+	@cmd flipdir
+	attack 0 0 0 0
+	frame	data/chars/jasmin/183
+	attack5  23 55 53 58 2 0 0 0 5 20
+	frame	data/chars/jasmin/182
+	@cmd flipdir
+	attack 0 0 0 0
+	frame	data/chars/jasmin/183
+	attack5  23 55 53 58 2 0 0 0 5 20
+	frame	data/chars/jasmin/182
+	@cmd flipdir
+	attack  0 0 0 0 
+	hitflash bblod
+	frame	data/chars/jasmin/183
+	attack3  23 55 53 58 10 1 0 0
+	dropv 2 3
+	frame	data/chars/jasmin/182
+	@cmd flipdir
+	blast 0 0 0 0
+	frame	data/chars/jasmin/183
+	attack3  23 55 53 58 10 1 0 0 
+	dropv 2 3
+	frame	data/chars/jasmin/182
+	blast  0 0 0 0
+	@cmd ani001 "ANI_FREESPECIAL20" 0
+	frame	data/chars/jasmin/183
+anim freespecial20
+	offset	76 143
+	jumpframe 0 1 0 0
+	dropframe 0
+	landframe 1
+	delay 1000
+	bbox	59 50 29 58
+	frame   data/chars/jasmin/180
+	delay 20
+	frame   data/chars/jasmin/051
+anim freespecial22
+	offset	76 143
+	bbox	60 47 25 69
+	delay 15
+	frame	data/chars/jasmin/041
+	frame	data/chars/jasmin/042
+	frame	data/chars/jasmin/043
+	delay 25
+	@cmd    keyint "ANI_FOLLOW2" 0 "A2" 0 200
+	frame	data/chars/jasmin/043
+anim follow2
+	offset	76 143
+	bbox	60 47 25 69
+	delay 10
+	frame	data/chars/jasmin/043
+	@cmd    keyint "ANI_FOLLOW2" 0 "A2" 0 200
+	frame	data/chars/jasmin/043
+	delay 20
+	frame	data/chars/jasmin/044
+anim freespecial24
+	offset	76 143
+	delay 5
+	fastattack 1
+	bbox	60 47 25 69
+	jumpframe 3 5 0.5 0
+	landframe 11
+	attackone 0
+	cancel 8 11 1 d freespecial38
+	frame	data/chars/jasmin/191
+	frame	data/chars/jasmin/192
+	frame	data/chars/jasmin/193
+	sound   data/sounds/haaa.wav
+	delay 5
+	attack5   91 38 32 61 10 1 0 0 10 10
+	dropv 4 0.2
+	frame	data/chars/jasmin/194
+	attack5 0 0 0 0
+	frame	data/chars/jasmin/194
+	attack5   91 38 32 61 10 1 0 0 10 10
+	dropv 4 0.2
+	frame	data/chars/jasmin/195
+	attack5 0 0 0 0
+	frame	data/chars/jasmin/195
+	delay 10
+	attack5   91 38 32 61 10 1 0 0 20 15
+	dropv 5 2
+	frame	data/chars/jasmin/196
+	attack5 0 0 0 0 0
+	frame	data/chars/jasmin/197
+	frame	data/chars/jasmin/198
+	delay 1000
+	frame	data/chars/jasmin/061
+	delay 15
+	frame	data/chars/jasmin/051
+anim freespecial25
+	offset	76 143
+	delay 50
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/037
+	delay 15
+	frame	data/chars/jasmin/038
+	frame	data/chars/jasmin/039
+	frame	data/chars/jasmin/040
+	frame	data/chars/jasmin/041
+	frame	data/chars/jasmin/042
+	frame	data/chars/jasmin/043
+	delay  1000
+	frame	data/chars/jasmin/044
+anim freespecial26
+	offset	76 143
+	delay 15
+	jumpframe 1 6 0 0
+	attackone 1
+	landframe 10
+	quakeframe 10 3 -4
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/jasmin/149
+	delay  20
+	@cmd    hurt 0 7
+	@cmd    position 0 15 45 -1 -1
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/212
+	delay 10
+	@cmd    hurt 0 7
+	@cmd    position 0 0 85 -1 1
+	frame	data/chars/jasmin/173
+	@cmd    hurt 0 7
+	@cmd    position 1 20 50 1 -1
+	frame	data/chars/jasmin/174
+	@cmd    hurt 0 7
+	@cmd    position 1 20 25 1 -1
+	frame	data/chars/jasmin/175
+	@cmd    hurt 0 7
+	@cmd    position 1 15 20 1 -1
+	frame	data/chars/jasmin/156
+	@cmd    hurt 0 7
+	@cmd    position 1 20 10 1 -1
+	frame	data/chars/jasmin/157
+	@cmd    hurt 0 7
+	@cmd    position 1 0 -10 1 -1
+	frame	data/chars/jasmin/158
+	@cmd    hurt 0 7
+	@cmd    position 1 0 0 1 -1
+	frame	data/chars/jasmin/117
+	@cmd    hurt 0 7
+	delay 1000
+	@cmd    position 1 -10 -10 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	delay 10
+	@cmd shoot "slamfl" 0 10 1
+	@cmd shoot "dst" 0 0 1
+	sound   data/sounds/bigfal.wav
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	delay 30
+	@cmd    keyint "ANI_FREESPECIAL17" 0 "FJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL27" 0 "BJ" 0 200
+	@cmd    depost 0
+	@cmd    finish 75 3 -2 2 0 0
+	frame	data/chars/jasmin/192
+	offset	76 143
+	delay 10
+	@cmd velo001 -2 0 3
+	frame	data/chars/jasmin/101
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	frame	data/chars/jasmin/055
+	delay 20
+	frame	data/chars/jasmin/045
+anim freespecial27
+	offset	76 143
+	delay 15
+	jumpframe 1 4 -1 0
+	attackone 1
+	dropframe 2
+	landframe 4
+	quakeframe 4 3 -3
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/jasmin/155
+	delay  1000
+	@cmd    hurt 0 7
+	@cmd    position 0 0 40 -1 1
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/030
+	@cmd    hurt 0 7
+	delay 10
+	@cmd    position 1 0 45 -1 1
+	frame	data/chars/jasmin/197
+	delay   1000
+	@cmd    hurt 0 8
+	@cmd    position 0 -25 0 -1 -1
+	frame	data/chars/jasmin/029a
+	delay 10
+	@cmd shoot "slamfl" 0 10 1
+	@cmd shoot "dust" 0 1 0
+	sound   data/sounds/bigfal.wav
+	@cmd    hurt 0 8
+	@cmd    position 0 -25 0 -1 -1
+	frame	data/chars/jasmin/029a
+	@cmd    hurt 0 8
+	@cmd    position 0 -25 0 -1 -1
+	frame	data/chars/jasmin/029a
+	@cmd    hurt 0 8
+	@cmd    position 0 -25 0 -1 -1
+	frame	data/chars/jasmin/029a
+	@cmd    depost 0
+	delay 30
+	@cmd    finish 50 3 2 2 0 1
+	#frame	data/chars/jasmin/252
+	frame	data/chars/jasmin/032
+	delay 10
+	#frame	data/chars/jasmin/032
+	frame	data/chars/jasmin/033
+	frame	data/chars/jasmin/034
+	frame	data/chars/jasmin/035
+anim freespecial28
+	offset	76 143
+	delay 10
+	bbox	0 0 0 0
+	jumpframe 1 0 2 0
+	landframe 2
+	frame	data/chars/jasmin/229
+	delay 20
+	attack  89 66 29 38 2 1 0 0 20
+	dropv 3 2
+	frame	data/chars/jasmin/202
+	delay 10
+	@cmd velo001 1.5 0 0
+	attack  89 66 29 38 2 1 0 0 20
+	dropv 3 1.5
+	frame	data/chars/jasmin/202
+	@cmd velo001 1 0 0
+	attack  89 66 29 38 2 1 0 0 20
+	dropv 3 1
+	frame	data/chars/jasmin/202
+	@cmd velo001 0.5 0 0
+	attack  0 0 0 0 0
+	frame	data/chars/jasmin/202
+	@cmd velo001 0 0 0
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/001
+anim freespecial29
+	offset	76 143
+	delay 15
+	jumpframe 1 6 1 0
+	attackone 1
+	landframe 10
+	quakeframe 10 3 -4
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/jasmin/149
+	delay  20
+	@cmd    hurt 0 7
+	@cmd    position 0 15 45 -1 -1
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/212
+	delay 10
+	@cmd    hurt 0 7
+	@cmd    position 0 0 85 -1 1
+	frame	data/chars/jasmin/173
+	@cmd    hurt 0 7
+	@cmd    position 1 20 50 1 -1
+	frame	data/chars/jasmin/174
+	@cmd    hurt 0 7
+	@cmd    position 1 20 25 1 -1
+	frame	data/chars/jasmin/175
+	@cmd    hurt 0 7
+	@cmd    position 1 15 20 1 -1
+	frame	data/chars/jasmin/156
+	@cmd    hurt 0 7
+	@cmd    position 1 20 10 1 -1
+	frame	data/chars/jasmin/157
+	@cmd    hurt 0 7
+	@cmd    position 1 0 -10 1 -1
+	frame	data/chars/jasmin/158
+	@cmd    hurt 0 7
+	@cmd    position 1 0 0 1 -1
+	frame	data/chars/jasmin/117
+	@cmd    hurt 0 7
+	delay 1000
+	@cmd    position 1 -10 -10 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	delay 10
+	@cmd shoot "slamfl" 0 10 1
+	@cmd shoot "dst" 0 0 1
+	sound   data/sounds/bigfal.wav
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    depost 0
+	delay 30
+	@cmd    finish 75 3 -2 2 0 0
+	frame	data/chars/jasmin/192
+	offset	76 143
+	delay 10
+	@cmd velo001 -2 0 3
+	frame	data/chars/jasmin/101
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	frame	data/chars/jasmin/055
+	delay 20
+	frame	data/chars/jasmin/045
+anim freespecial30
+	offset	76 143
+	delay 15
+	jumpframe 1 6 -1 0
+	attackone 1
+	landframe 10
+	quakeframe 10 3 -4
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/jasmin/149
+	delay  20
+	@cmd    hurt 0 7
+	@cmd    position 0 15 45 -1 -1
+	sound   data/sounds/haaa.wav
+	frame	data/chars/jasmin/212
+	delay 10
+	@cmd    hurt 0 7
+	@cmd    position 0 0 85 -1 1
+	frame	data/chars/jasmin/173
+	@cmd    hurt 0 7
+	@cmd    position 1 20 50 1 -1
+	frame	data/chars/jasmin/174
+	@cmd    hurt 0 7
+	@cmd    position 1 20 25 1 -1
+	frame	data/chars/jasmin/175
+	@cmd    hurt 0 7
+	@cmd    position 1 15 20 1 -1
+	frame	data/chars/jasmin/156
+	@cmd    hurt 0 7
+	@cmd    position 1 20 10 1 -1
+	frame	data/chars/jasmin/157
+	@cmd    hurt 0 7
+	@cmd    position 1 0 -10 1 -1
+	frame	data/chars/jasmin/158
+	@cmd    hurt 0 7
+	@cmd    position 1 0 0 1 -1
+	frame	data/chars/jasmin/117
+	@cmd    hurt 0 7
+	delay 1000
+	@cmd    position 1 -10 -10 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	delay 10
+	@cmd shoot "slamfl" 0 10 1
+	@cmd shoot "dst" 0 0 1
+	sound   data/sounds/bigfal.wav
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    hurt 0 7
+	@cmd    position 2 -10 0 1 -1
+	frame	data/chars/jasmin/118
+	@cmd    depost 0
+	delay 30
+	@cmd    finish 75 3 -2 2 0 0
+	frame	data/chars/jasmin/192
+	offset	76 143
+	delay 10
+	@cmd velo001 -2 0 3
+	frame	data/chars/jasmin/101
+	frame	data/chars/jasmin/102
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	frame	data/chars/jasmin/055
+	delay 20
+	frame	data/chars/jasmin/045
+anim freespecial31
+	delay 5
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 5 0 2 0
+	landframe 8
+	frame	data/chars/jasmin/207
+	offset	77 143
+	@cmd shoot "aura1" -17 0 1
+	frame	data/chars/jasmin/207
+	offset	76 143
+	frame	data/chars/jasmin/207
+	offset	75 143
+	@cmd shoot "aura2" -17 0 -1
+	frame	data/chars/jasmin/207
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL32" 0 "S" 0 200
+	frame	data/chars/jasmin/207
+	delay 10
+	frame	data/chars/jasmin/199
+	frame	data/chars/jasmin/200
+	attack    0 0 0 0
+	delay 10
+	sound   data/sounds/punch2.wav
+	attack    78 77 44 11 20 1 0 0 20
+	dropv 3 2
+	frame	data/chars/jasmin/201
+	@cmd velo001 1.5 0 0
+	attack    78 77 44 11 15 1 0 0 20
+	dropv 3 1.5
+	frame	data/chars/jasmin/201
+	@cmd velo001 1 0 0
+	attack    78 77 44 11 10 1 0 0 20
+	dropv 3 1
+	frame	data/chars/jasmin/201
+	attack    78 77 44 11 10 0 0 0 20
+	dropv 3 0.5
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/201
+anim freespecial32
+	delay 5
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 5 0 3 0
+	landframe 8
+	frame	data/chars/jasmin/207
+	offset	78 143
+	@cmd shoot "aura1" -17 0 1
+	frame	data/chars/jasmin/207
+	offset	76 143
+	frame	data/chars/jasmin/207
+	offset	74 143
+	@cmd shoot "aura3" -17 0 -1
+	frame	data/chars/jasmin/207
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL32" 0 "S" 0 200
+	frame	data/chars/jasmin/207
+	delay 5
+	attack    73 59 30 43 30 1 1 0 5
+	dropv 3 3
+	frame	data/chars/jasmin/199
+	frame	data/chars/jasmin/200
+	attack    0 0 0 0
+	delay 10
+	sound   data/sounds/punch2.wav
+	attack    78 77 44 11 30 1 1 0 20
+	dropv 3 3
+	frame	data/chars/jasmin/201
+	@cmd velo001 1.5 0 0
+	attack    78 77 44 11 25 1 1 0 20
+	dropv 3 2
+	frame	data/chars/jasmin/201
+	@cmd velo001 1 0 0
+	attack    78 77 44 11 20 1 1 0 20
+	dropv 3 1
+	frame	data/chars/jasmin/201
+	attack    78 77 44 11 20 1 1 0 20
+	dropv 3 0.5
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/201
+anim freespecial33
+	offset	76 143
+	bbox	0 0 0 0
+	jumpframe 0 3 0 0.5
+	landframe 7
+	delay 9
+	frame	data/chars/jasmin/074
+	frame	data/chars/jasmin/073
+	frame	data/chars/jasmin/072
+	frame	data/chars/jasmin/071
+	frame	data/chars/jasmin/070
+	frame	data/chars/jasmin/069
+	frame	data/chars/jasmin/068
+	delay 20
+	frame	data/chars/jasmin/035
+anim freespecial34
+	offset	76 143
+	bbox	0 0 0 0
+	jumpframe 0 3 0 -0.5
+	landframe 7
+	delay 9
+	frame	data/chars/jasmin/074
+	frame	data/chars/jasmin/073
+	frame	data/chars/jasmin/072
+	frame	data/chars/jasmin/071
+	frame	data/chars/jasmin/070
+	frame	data/chars/jasmin/069
+	frame	data/chars/jasmin/068
+	delay 20
+	frame	data/chars/jasmin/035
+anim freespecial35
+	delay 8
+	offset	76 143
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/159
+	sound   data/sounds/punch2.wav
+	attack2  76 86 70 35 6 0 0 0 15
+	otg 1
+	frame	data/chars/jasmin/160
+	attack2  0 0 0 0 0
+	frame	data/chars/jasmin/078
+	sound   data/sounds/punch2.wav
+	attack2  76 69 70 20 6 0 0 0 15
+	frame	data/chars/jasmin/079
+	attack2  0 0 0 0 0
+	frame	data/chars/jasmin/078
+	sound   data/sounds/punch2.wav
+	delay 10
+	attack5 76 48 70 28 10 1 0 0 40
+	dropv 5.5 0.3
+	frame	data/chars/jasmin/080
+	attack5  0 0 0 0 0
+	frame	data/chars/jasmin/080
+	frame	data/chars/jasmin/078
+anim freespecial36
+	delay 8
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 0 3 0 0
+	landframe 8
+	frame	data/chars/jasmin/121
+	sound   data/sounds/punch2.wav
+	attack    75 65 59 35 6 0 0 0 20
+	frame	data/chars/jasmin/122
+	attack    0 0 0 0
+	frame	data/chars/jasmin/123
+	sound   data/sounds/punch2.wav
+	attack  77 81 59 30 6 0 0 0 20
+	frame	data/chars/jasmin/124
+	attack  0 0 0 0 
+	frame	data/chars/jasmin/127
+	frame	data/chars/jasmin/128
+	sound   data/sounds/punch2.wav
+	delay   1000
+	blast    83 74 61 31 10 1 0 40
+	frame	data/chars/jasmin/129
+	
+	blast 0 0 0 0
+	frame	data/chars/jasmin/077
+	delay 1
+	frame	data/chars/jasmin/001
+anim runslide       
+	offset	76 143
+	delay 100
+	bbox	0 0 0 0
+	jumpframe 0 2 2 0
+	landframe 1
+	frame	data/chars/jasmin/075
+	offset	102 149
+	delay 5
+	hitflash bflash
+	@cmd velo001 2 0 0
+	bbox	53 97 45 51
+	sound data/sounds/slide.wav
+	attack3  88 109 57 40 10 1 0 0 10
+	otg 1
+	frame	data/chars/jasmin/0331
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0332
+	@cmd velo001 1.5 0 0
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0333
+	frame	data/chars/jasmin/0334
+	@cmd velo001 1 0 0
+	frame	data/chars/jasmin/0331
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0332
+	@cmd velo001 0.5 0 0
+	frame	data/chars/jasmin/0334
+	frame	data/chars/jasmin/0333
+	frame	data/chars/jasmin/0334
+	attack  0 0 0 0 0
+	@cmd velo001 0 0 0
+	offset	76 143
+	delay 10
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/034
+	frame	data/chars/jasmin/051
+anim freespecial39
+	@script
+	void self = getlocalvar("self");
+	void SHealth = getentityproperty(self,"health"); 
+	if (frame == 5){
+	setidle(self);
+	changeentityproperty(self, "health", SHealth + 4);
+	}
+	@end_script
+	delay 10
+	offset	76 143
+	bbox	60 47 25 69
+	jumpframe 0 3 -1 0
+	landframe 5
+	sound data/sounds/jump.wav
+	frame	data/chars/jasmin/102
+	@cmd aiflag "falling" 0 "common_pain"
+	@cmd aiflag "drop" 0 "common_pain"
+	@cmd aiflag "projectile" 0 "common_pain"
+	frame	data/chars/jasmin/103
+	frame	data/chars/jasmin/104
+	frame	data/chars/jasmin/105
+	delay 1000
+	frame	data/chars/jasmin/058
+	delay 5
+	frame	data/chars/jasmin/051
+anim freespecial38
+	offset	76 143
+	delay 5
+	bbox	60 47 25 69
+	jumpframe 0 1 2 0
+	landframe 2
+	frame	data/chars/jasmin/125
+	delay 1000
+	sound   data/sounds/punch2.wav
+	attack3 82 73 48 38 6 1 0 0 20
+	otg 1
+	@cmd velo001 2 0 -2
+	frame	data/chars/jasmin/126  
+	delay 5
+	attack3 0
+	@cmd velo001 0 0 0
+	@cmd aiflag "jumping" 0 "common_land"
+	frame	data/chars/jasmin/051
+	frame	data/chars/jasmin/051	

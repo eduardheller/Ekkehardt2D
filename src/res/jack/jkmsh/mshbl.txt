@@ -1,0 +1,34 @@
+name	mshbl
+type	pshot
+speed 25
+candamage enemy npc obstacle
+lifespan 3
+anim spawn
+	delay	4
+	offset	-1 14
+	bbox 0 0 0 0
+	frame	data/chars/jack/jkmsh/mshbl1
+	frame	data/chars/jack/jkmsh/mshbl2
+	frame	data/chars/jack/jkmsh/mshbl3
+anim idle
+	loop 1
+	delay	2
+	offset	-1 14
+	bbox 0 0 0 0
+	attack5  0 11 23 5 10 1 1 
+	seal 5 0
+	hitfx data/sounds/empty.wav
+	frame	data/chars/jack/jkmsh/mshbl4 
+	attack2  0 11 23 5 10 0 1 
+	seal 5 0
+	frame	data/chars/jack/jkmsh/mshbl4 
+	attack3  0 11 23 5 10 0 1 
+	seal 5 0
+	frame	data/chars/jack/jkmsh/mshbl5
+	delay 2
+	attack4  0 11 23 5 15 0 1 
+	seal 5 0
+	frame	data/chars/jack/jkmsh/mshbl5 
+	attack  0 11 23 5 15 0 1 
+	seal 5 0
+	frame	data/chars/jack/jkmsh/mshbl5 

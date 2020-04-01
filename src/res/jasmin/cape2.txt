@@ -1,0 +1,24 @@
+name cape2
+type pshot
+speed 1
+gfxshadow 1
+anim idle 
+	offset 29 68
+	bbox 0 0 0 0
+	delay 2
+	movea -2
+	flipframe 0
+	frame data/chars/jasmin/a5
+	frame data/chars/jasmin/a5
+	frame data/chars/jasmin/a5
+	frame data/chars/jasmin/a5
+	frame data/chars/jasmin/a5
+	delay 5
+	frame data/chars/misc/empty
+	frame data/chars/jasmin/a5
+	frame data/chars/misc/empty
+	frame data/chars/jasmin/a5
+	frame data/chars/misc/empty
+	frame data/chars/jasmin/a5
+	frame data/chars/misc/empty
+

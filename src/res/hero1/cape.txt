@@ -1,0 +1,27 @@
+name cape
+type pshot
+speed 1
+palette data/chars/chris/001
+alternatepal data/chars/chris/alt1
+alternatepal data/chars/chris/alt2
+alternatepal data/chars/chris/alt3
+alternatepal data/chars/chris/alt4
+gfxshadow 1
+anim idle 
+	offset 24 61
+	bbox 0 0 0 0
+	delay 2
+	movea -2
+	frame data/chars/chris/130
+	frame data/chars/chris/130
+	frame data/chars/chris/130
+	frame data/chars/chris/130
+	frame data/chars/chris/130
+	delay 5
+	frame data/chars/misc/empty
+	frame data/chars/chris/130
+	frame data/chars/misc/empty
+	frame data/chars/chris/130
+	frame data/chars/misc/empty
+	frame data/chars/chris/130
+	frame data/chars/misc/empty

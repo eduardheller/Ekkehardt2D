@@ -1,0 +1,19 @@
+name	frrock
+health 1
+type	enemy
+speed 20
+candamage player enemy npc obstacle
+nolife 1
+remove 0
+noatflash 1
+flash flashb
+anim idle
+	loop 1
+	delay 4
+	offset  35 33
+	bbox    0 0 0 0
+	hitflash bflash
+	attack  10 3 45 31 15 1 0 0 5 
+	dropv 2 3
+	movea -1
+	frame data/chars/franken/d4

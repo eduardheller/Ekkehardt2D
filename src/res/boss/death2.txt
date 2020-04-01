@@ -1,0 +1,97 @@
+name death2
+health	10
+type	none
+shadow	3
+noquake 1
+nomove 1 1
+paingrab 1
+cantgrab 1
+gfxshadow 1
+jumpheight 3
+palette data/chars/death/00
+alternatepal data/chars/death/alt1a
+anim idle 
+	delay	5
+	offset  71 164
+	bbox    0 0 0 0
+	frame	data/chars/death/01
+	offset  71 163
+	frame	data/chars/misc/empty
+	offset  71 162
+	frame	data/chars/death/01
+	offset  71 161
+	frame	data/chars/misc/empty
+	offset  71 160
+	frame	data/chars/death/01
+	offset  71 159
+	frame	data/chars/misc/empty
+	offset  71 158
+	frame	data/chars/death/01
+	offset  71 159
+	frame	data/chars/misc/empty
+	offset  71 160
+	frame	data/chars/death/01
+	offset  71 161
+	frame	data/chars/misc/empty
+	offset  71 162
+	frame	data/chars/death/01
+	offset  71 163
+	frame	data/chars/misc/empty
+	delay 15
+	offset  71 164
+	sound   data/sounds/death2.wav
+	frame	data/chars/death/04
+	offset  71 165
+	frame	data/chars/death/02
+	offset  71 166
+	frame	data/chars/death/03
+	offset  71 167
+	frame	data/chars/death/02
+	offset  71 168
+	frame	data/chars/death/03
+	offset  71 169
+	frame	data/chars/death/02
+	offset  71 170
+	frame	data/chars/death/03
+	offset  71 169
+	frame	data/chars/death/02
+	offset  71 168
+	frame	data/chars/death/04
+	offset  71 167
+	frame	data/chars/death/34
+	offset  71 166
+	delay 150
+	frame	data/chars/death/35
+	delay 10
+	offset  71 165
+	frame	data/chars/death/34
+	delay 5
+	offset  71 164
+	bbox    0 0 0 0
+	frame	data/chars/death/01
+	offset  71 163
+	frame	data/chars/misc/empty
+	offset  71 162
+	frame	data/chars/death/01
+	offset  71 161
+	frame	data/chars/misc/empty
+	offset  71 160
+	frame	data/chars/death/01
+	offset  71 159
+	frame	data/chars/misc/empty
+	offset  71 158
+	frame	data/chars/death/01
+	offset  71 159
+	frame	data/chars/misc/empty
+	offset  71 160
+	frame	data/chars/death/01
+	offset  71 161
+	frame	data/chars/misc/empty
+	offset  71 162
+	frame	data/chars/death/01
+	offset  71 163
+	@cmd killentity getlocalvar("self")
+	frame	data/chars/misc/empty
+
+
+

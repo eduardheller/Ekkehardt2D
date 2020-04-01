@@ -1,0 +1,78 @@
+name	franksp
+health	800
+speed	8
+type	text
+subtype noskip
+anim idle
+	delay	120
+	offset  99 149
+	bbox    0 0 0 0
+	frame	data/chars/franken/051
+	delay 5
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/052
+	frame	data/chars/franken/053
+	frame	data/chars/franken/051
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/052
+	frame	data/chars/franken/053
+	frame	data/chars/franken/051
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/052
+	frame	data/chars/franken/053
+	frame	data/chars/franken/051
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/052
+	frame	data/chars/franken/053
+	frame	data/chars/franken/051
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/052
+	frame	data/chars/franken/053
+	frame	data/chars/franken/051
+	delay   15
+	frame	data/chars/franken/054
+	frame	data/chars/franken/055
+	frame	data/chars/franken/056
+	frame	data/chars/franken/057
+	frame	data/chars/franken/058
+	frame	data/chars/franken/059
+	frame	data/chars/franken/060
+	delay 5
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/061
+	frame	data/chars/franken/062
+	frame	data/chars/franken/063
+	frame	data/chars/franken/064
+	frame	data/chars/franken/065
+	frame	data/chars/franken/066
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/067
+	frame	data/chars/franken/068
+	frame	data/chars/franken/069
+	frame	data/chars/franken/070
+	frame	data/chars/franken/071
+	frame	data/chars/franken/050
+	frame	data/chars/franken/071
+	sound   data/sounds/lbhit.wav
+	frame	data/chars/franken/048
+	frame	data/chars/franken/071
+	frame	data/chars/franken/049
+	frame	data/chars/franken/071
+	frame	data/chars/franken/050
+	delay   20
+	sound   data/sounds/betme.wav
+	frame	data/chars/franken/013
+	frame	data/chars/franken/014
+	frame	data/chars/franken/015
+	frame	data/chars/franken/014
+	frame	data/chars/franken/013
+	frame	data/chars/franken/014
+	frame	data/chars/franken/015
+	frame	data/chars/franken/014
+	frame	data/chars/franken/013
+	frame	data/chars/franken/014
+	frame	data/chars/franken/015
+	frame	data/chars/franken/014
+	frame	data/chars/franken/013
+	delay  336
+	frame	data/chars/franken/001

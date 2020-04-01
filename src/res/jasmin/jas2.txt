@@ -1,0 +1,80 @@
+name	Jas2
+health	100
+speed	12
+mprate 1
+nolife 1
+chargerate 2
+type	none
+shadow	3
+makeinv 4 
+running  24 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 2 3 4
+gfxshadow 1
+jumpheight 4
+bounce 1
+com u d j freespecial2
+com d u j freespecial4
+com d u a freespecial16
+com u d s freespecial3
+com b b s freespecial9
+com d u s freespecial18
+com a2 freespecial22
+icon data/chars/jasmin/icon
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+animationscript data/scripts/clear.c
+anim spawn
+	@cmd clearL
+	offset	76 143
+	delay 20
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/001
+	delay 50
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/037
+	delay 15
+	frame	data/chars/jasmin/038
+	frame	data/chars/jasmin/039
+	frame	data/chars/jasmin/040
+anim respawn
+	@cmd clearL
+	offset	76 143
+	delay 20
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/001
+	delay 50
+	bbox	60 47 25 69
+	frame	data/chars/jasmin/037
+	delay 15
+	frame	data/chars/jasmin/038
+	frame	data/chars/jasmin/039
+	frame	data/chars/jasmin/040
+anim idle       
+	loop	1
+	offset	76 143
+	delay 1
+	bbox	60 47 25 69
+	weaponframe 0 0
+	frame	data/chars/jasmin/001
+	frame	data/chars/jasmin/001 
+anim walk
+	loop	1
+	delay 12
+	offset	76 143
+	bbox	60 47 25 69
+	weaponframe 0 0
+	frame	data/chars/jasmin/006
+	frame	data/chars/jasmin/007
+	frame	data/chars/jasmin/002
+	frame	data/chars/jasmin/003
+	frame	data/chars/jasmin/004
+	frame	data/chars/jasmin/005

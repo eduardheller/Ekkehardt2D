@@ -1,0 +1,2033 @@
+name	Chris
+health	100
+speed	11
+nolife 1
+type	player
+shadow	3
+makeinv 4
+running  22 4 2 1 0
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 2 3 4
+gfxshadow 1
+load bosslow
+load cape
+load slamfl
+load chrspa
+load chrspb
+load chrspc
+load chrspd
+load chrspe
+load chris6
+load slamfl2
+load aura1
+load aura2
+load dust
+load dst
+load cntfl
+load aura1
+load aura2
+load aura3
+load select
+jumpheight 4
+bounce 1
+weapons chris2 chris3 chris4 chris5 chris6 chris7 chris8 chris12 chris10 chris11 Chris
+com d d j freespecial2
+com u u j freespecial4
+com d u a freespecial16
+com u d s freespecial3
+com b b s freespecial9
+com d u s freespecial18
+com d d a freespecial35
+com u u a freespecial36
+com d f a freespecial33
+com a2 freespecial22
+icon data/chars/chris/icon
+animationscript data/scripts/player.c 
+keyscript data/scripts/keych.c
+ondeathscript data/scripts/death.c
+didhitscript 	 data/scripts/hit1.c 
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+nodieblink 1
+height  1000
+diesound   data/sounds/guydie.wav
+projectilehit enemy npc obstacle
+candamage npc enemy obstacle
+palette data/chars/misc/z1
+anim spawn
+	@cmd clearL
+	offset	72 140
+	delay 230
+	bbox	57 43 27 73
+	frame	data/chars/chris/001
+	delay 15
+	frame	data/chars/chris/002
+	frame	data/chars/chris/003
+	frame	data/chars/chris/004
+	delay 1
+	@cmd shoot "cape" 21 13 0
+	frame	data/chars/chris/005
+anim respawn
+	@cmd clearL
+	offset	72 140
+	delay 4
+	bbox	0 0 0 0
+	frame	data/chars/chris/g1
+	frame	data/chars/chris/g1
+	frame	data/chars/chris/g1
+	frame	data/chars/chris/g1
+	frame	data/chars/chris/g1
+	delay 10
+	sound data/sounds/n/ycofgrd.wav
+	frame	data/chars/chris/g2
+	frame	data/chars/chris/g1
+	frame	data/chars/chris/g2
+	frame	data/chars/chris/g1
+	delay 50
+	frame	data/chars/chris/a5
+anim bdie
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	jumpframe 0 3 -1 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	delay 30
+	offset	72 140
+	frame	data/chars/chris/053
+anim burn
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	frame	data/chars/burn/1
+	frame	data/chars/burn/2
+	frame	data/chars/burn/3
+	delay 30
+	offset	72 140
+	frame	data/chars/chris/053
+anim sdie
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	jumpframe 0 3 -1 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	delay 30
+	offset	72 140
+	frame	data/chars/chris/053
+anim shock
+	offset	65 93
+	delay 10
+	bbox    0 0 0 0
+	landframe 15
+	bounce 1
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	frame	data/chars/burn/a1
+	frame	data/chars/burn/a2
+	frame	data/chars/burn/a3
+	delay 30
+	offset	72 140
+	frame	data/chars/chris/053
+anim idle
+	loop	1
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/005
+	@cmd    clearL
+	@cmd aiflag "blocking" 0 "common_attack_proc"
+	frame	data/chars/chris/006
+	frame	data/chars/chris/007
+	frame	data/chars/chris/008
+	frame	data/chars/chris/007
+	frame	data/chars/chris/006
+anim walk
+	@cmd    clearL
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/009
+	frame	data/chars/chris/010
+	frame	data/chars/chris/011
+	frame	data/chars/chris/012
+	frame	data/chars/chris/013
+	frame	data/chars/chris/014
+	frame	data/chars/chris/015
+	frame	data/chars/chris/016
+anim waiting
+	loop 1
+	offset	45 312
+	delay 10
+	fshadow 0
+	frame	data/chars/chris/selb1
+anim waiting
+	loop 1
+	offset	71 290
+	delay 10
+	fshadow 0
+#	summonframe 0 0 0 0
+#	subentity select
+	frame	data/chars/misc/za3
+anim select
+	offset	71 290
+	delay 5
+	fshadow 0
+	sound   data/sounds/goodch.wav
+	frame	data/chars/misc/z3
+	frame	data/chars/misc/za3
+	frame	data/chars/misc/z3
+	frame	data/chars/misc/za3
+	frame	data/chars/misc/z3
+	frame	data/chars/misc/za3
+	frame	data/chars/misc/z3
+	frame	data/chars/misc/za3
+	frame	data/chars/misc/z3
+anim run
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/017
+	frame	data/chars/chris/018
+	frame	data/chars/chris/019
+	frame	data/chars/chris/020
+	frame	data/chars/chris/021
+	frame	data/chars/chris/022
+	frame	data/chars/chris/023
+	frame	data/chars/chris/024
+anim runattack
+	@script
+	void self = getlocalvar("self");
+	void target = findtarget(self);
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+		if(z1-z2<15 && z1-z2>-15 && x1-x2>-50 && x1-x2<50){
+			changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL12"));
+		}
+	}
+	@end_script
+	offset	72 140
+	delay 4
+	bbox	57 43 27 73
+	@cmd velo001 2 0 0
+	frame	data/chars/chris/029
+	@cmd shoot "dust" 20 1 0
+	sound   data/sounds/chrrat.wav
+	frame	data/chars/chris/030
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/084
+	blast   72 56 56 34 10 0 0 30
+	frame	data/chars/chris/085
+	frame	data/chars/chris/084
+	@cmd velo001 1.5 0 0
+	frame	data/chars/chris/086
+	blast 0
+	frame	data/chars/chris/084
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/087
+	frame	data/chars/chris/084
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/088
+	frame	data/chars/chris/084
+	blast   0 0 0 0
+	@cmd velo001 0 0 0
+	frame	data/chars/chris/029
+anim get
+	delay 10
+	offset	72 140
+	bbox	0 0 0 0
+	frame	data/chars/chris/099
+	frame	data/chars/chris/100
+	frame	data/chars/chris/099
+anim attackbackward
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	flipframe 0
+	cancel 3 5 1 D F A freespecial33
+	frame	data/chars/chris/032
+	frame	data/chars/chris/033
+	sound   data/sounds/punch2.wav
+	delay 1
+	hitflash flash
+	attack5  87 54 49 34 10 1 0 0 25
+	dropv 4 0.8
+	frame	data/chars/chris/034
+	delay  9
+	hitflash smash
+	attack5  87 54 49 34 20 1 0 0 25
+	dropv 4 0.8
+	frame	data/chars/chris/034
+	delay   10
+	attack  0 0 0 0
+	frame	data/chars/chris/035
+anim attack1
+	@script
+	void self = getlocalvar("self");
+	void vAniPos = getentityproperty(self, "animpos");
+	void target = findtarget(self);
+	void eAniID = getentityproperty(target, "animationID");
+	float x1 = getentityproperty(target, "x");
+	float x2 = getentityproperty(self, "x");
+	float z1 = getentityproperty(target, "z");
+	float z2 = getentityproperty(self, "z");
+	if(frame == 0){
+		if(eAniID == openborconstant("ANI_FALL") || eAniID == openborconstant("ANI_RISE") || eAniID == openborconstant("ANI_FALL5") || eAniID == openborconstant("ANI_FALL8") || eAniID == openborconstant("ANI_RISE")){
+			if(z1-z2<20 && z1-z2>-20 && x1-x2>-80 && x1-x2<80){
+				if(playerkeys(getentityproperty(self, "playerindex"), 0, "movedown")){
+					changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL11"));
+				}
+			}
+			if(z1-z2<20 && z1-z2>-20 && x1-x2>-100 && x1-x2<100){
+				if(playerkeys(getentityproperty(self, "playerindex"), 0, "moveup")){
+					changeentityproperty(self, "animation", openborconstant("ANI_FREESPECIAL14"));
+				}
+			}
+		}
+	}
+	@end_script
+	offset	72 140
+	bbox	57 43 27 73
+	hitfx data/sounds/beatb.wav
+	cancel 1 3 2 f freespecial12
+	sound   data/sounds/punch2.wav
+	delay 5
+	frame	data/chars/chris/027
+	delay 1
+	hitflash flash
+	attack2 74 73 62 19 6 0 0 0 10
+	frame	data/chars/chris/026
+	hitflash smash
+	delay 6
+	attack2 74 73 62 19 20 0 0 0 15
+	frame	data/chars/chris/026
+	delay 5
+	attack2  0 0 0 0
+	frame	data/chars/chris/027
+anim attack2
+	offset	72 140
+	delay 7
+	bbox	57 43 27 73
+	hitfx data/sounds/beatc.wav
+	attack 74 55 62 35 8 0 0 0 12
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/028
+	attack  0 0 0 0
+	frame	data/chars/chris/025
+	frame	data/chars/chris/029
+	frame	data/chars/chris/030
+	attack2  74 71 62 22 10 0 0 0 15
+	frame	data/chars/chris/031
+anim attack3
+	offset	72 140
+	delay 7
+	bbox	57 43 27 73
+	hitfx data/sounds/beatc.wav
+	cancel 2 3 1 d f a freespecial33
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/032
+	frame	data/chars/chris/033
+	attack  74 53 62 35 12 0 0 0 15
+	frame	data/chars/chris/034
+	attack  0 0 0 0
+	frame	data/chars/chris/035
+anim attack4
+	offset	72 140
+	delay 5
+	hitflash flashe
+	bbox	57 43 27 73
+	@cmd    keyint "ANI_FREESPECIAL16" 0 "UA" 0 200
+	@cmd    keyint "ANI_FREESPECIAL28" 0 "DA" 0 200
+	frame	data/chars/chris/036
+	frame	data/chars/chris/037
+	sound data/sounds/shing.wav
+	frame	data/chars/chris/038
+	frame	data/chars/chris/038a
+	attack3 77 30 66 50 16 1 0 0 15
+	dropv 2 3
+	frame	data/chars/chris/040
+	frame	data/chars/chris/039
+	frame	data/chars/chris/037
+	frame	data/chars/chris/041
+	frame	data/chars/chris/037
+	frame	data/chars/chris/042
+	frame	data/chars/chris/037
+	delay   10
+	attack3  0 0 0 0 0
+	frame	data/chars/chris/043
+anim freespecial35
+	offset	72 140
+	delay 8
+	bbox	57 43 27 73
+	hitfx data/sounds/beatc.wav
+	cancel 11 18 1 D F A freespecial33
+	frame	data/chars/chris/027
+	attack 74 73 62 19 1 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/028
+	attack 0 0 0 0 
+	frame	data/chars/chris/027
+	attack 72 56 56 34 1 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/028
+	attack 0 0 0 0 
+	frame	data/chars/chris/027
+	attack 74 73 62 19 1 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/028
+	attack 0 0 0 0 0
+	frame	data/chars/chris/029
+	delay 4
+	frame	data/chars/chris/030
+	frame	data/chars/chris/084
+	frame	data/chars/chris/085
+	frame	data/chars/chris/084
+	hitfx data/sounds/beat1.wav
+	hitflash smash
+	attack5 72 56 56 34 30 1 0 0 30
+	dropv 4.5 2
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/086
+	frame	data/chars/chris/084
+	frame	data/chars/chris/087
+	frame	data/chars/chris/084
+	frame	data/chars/chris/088
+	frame	data/chars/chris/084
+	attack5   0 0 0 0
+	frame	data/chars/chris/029
+anim freespecial36
+	offset	72 140
+	delay 8
+	bbox	57 43 27 73
+	hitfx data/sounds/beatb.wav
+	frame	data/chars/chris/g1
+	attack  71 54 45 28 1 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/g2
+	attack  0 0 0 0 0
+	frame	data/chars/chris/g1
+	attack  71 54 45 28 1 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/g2
+	attack  0 0 0 0 
+	frame	data/chars/chris/g1
+	attack  71 54 45 28 1 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/g2
+	attack  0 0 0 0 0
+	offset	72 140
+	delay 20
+	bbox	57 43 27 73
+	frame	data/chars/chris/a2
+	delay 10
+	@cmd velo001 2 0 0
+	frame	data/chars/chris/a3
+	delay 5
+	hitflash smash
+	hitfx data/sounds/beat1.wav
+	attack 81 59 30 29 50 1 0 0 30
+	sound   data/sounds/punch2.wav
+	dropv 3 2 -0.5
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/a4
+	attack 81 59 30 29 55 1 0 0 35
+	dropv 3 2 -0.5
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/a4
+	blast 0 0 0 0 0
+	delay 15
+	@cmd velo001 0 0 0
+	frame	data/chars/chris/a4
+anim special
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0 
+	hitflash cflash
+	energycost 5
+	hitfx   data/sounds/empty.wav
+	frame	data/chars/chris/101
+	frame	data/chars/chris/102
+	sound data/sounds/n/hwat.wav
+	frame	data/chars/chris/103
+	frame	data/chars/chris/104
+	frame	data/chars/chris/105
+	offset	72 160
+	delay 5
+	frame	data/chars/chris/106
+	frame	data/chars/chris/113a
+	frame	data/chars/chris/107
+	frame	data/chars/chris/113a
+	shock   20 27 97 141 10 1 0 0 10 15
+	otg 1
+	dropv 3 2 0
+	frame	data/chars/chris/108
+	frame	data/chars/chris/113a
+	frame	data/chars/chris/109
+	frame	data/chars/chris/113a
+	frame	data/chars/chris/110
+	frame	data/chars/chris/113a
+	frame	data/chars/chris/111
+	frame	data/chars/chris/113a
+	frame	data/chars/chris/112
+	shock  0 0 0 0 0
+	delay  10
+	frame	data/chars/chris/113
+	frame	data/chars/chris/114
+anim special2
+	offset	72 140
+	delay 29
+	bbox	57 43 27 73
+	frame	data/chars/chris/a2
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL31" 0 "S" 0 200
+	frame	data/chars/chris/a2
+	delay 10
+	@cmd velo001 1 0 0 
+	frame	data/chars/chris/a3
+	delay 3
+	blast 81 59 30 29 10 1 0 30
+	sound   data/sounds/punch2.wav
+	dropv 3 2 -0.5
+	@cmd velo001 2 0 0 
+	frame	data/chars/chris/a4
+	delay 2
+	hitflash bblod
+	attack 81 59 30 29 10 1 0 0 30
+	dropv 4 1.5 
+	frame	data/chars/chris/a4
+	hitflash smash
+	attack 81 59 30 29 15 1 0 0 35
+	dropv 4 1.5 
+	@cmd velo001 1 0 0 
+	frame	data/chars/chris/a4
+	@cmd velo001 0.5 0 0 
+	delay 10
+	blast 0 0 0 0
+	frame	data/chars/chris/a4
+	@cmd velo001 0 0 0 
+	blast 0 0 0 0
+	frame	data/chars/chris/a4
+anim special3
+	energycost 20
+	offset	72 140
+	delay 5
+	dive 0 -1
+	bbox	0 0 0 0
+	spawnframe 7 0 120 0 1
+	subentity chspmg
+	hitfx   data/sounds/empty.wav
+	frame	data/chars/chris/115
+	frame	data/chars/chris/116
+	frame	data/chars/chris/117
+	frame	data/chars/chris/118
+	frame	data/chars/chris/119
+	frame	data/chars/chris/120
+	frame	data/chars/chris/121
+	delay 1
+	sound   data/sounds/bckabs.wav
+	frame	data/chars/chris/121
+	@cmd spawner "chrspa"  0 -1 1
+	hitflash bblod
+	attack -1000 -1000 2000 2000 49 1 0 0 10 1000
+	dropv 6 1
+	otg 1
+	frame	data/chars/chris/122
+	@cmd ani001 "ANI_JUMP" 2
+	frame	data/chars/chris/122
+anim jumpdelay
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	frame	data/chars/chris/054
+anim jumpland
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	cancel 0 2 0 d f a freespecial33
+	frame	data/chars/chris/047
+	delay 5
+	frame	data/chars/chris/099
+anim jump
+	offset	72 140
+	delay 15
+	dropframe 2
+	bbox	59 50 29 58
+	frame	data/chars/chris/055
+	frame	data/chars/chris/056
+	frame	data/chars/chris/057
+	frame	data/chars/chris/056
+	delay   1000
+	frame	data/chars/chris/055
+anim forwardjump
+	offset	72 140
+	delay 10
+	dropframe 3
+	bbox	56 67 38 37
+	frame	data/chars/chris/068
+	frame	data/chars/chris/069
+	frame	data/chars/chris/070
+	frame	data/chars/chris/071
+	frame	data/chars/chris/072
+	delay 1000
+	frame	data/chars/chris/073
+anim runjump
+	offset	72 140
+	delay 10
+	dropframe 3
+	bbox	57 43 27 73
+	frame	data/chars/chris/068
+	frame	data/chars/chris/069
+	frame	data/chars/chris/070
+	frame	data/chars/chris/071
+	frame	data/chars/chris/072
+	delay 1000
+	frame	data/chars/chris/073
+anim jumpattack
+	offset	72 140
+	delay 5
+	bbox	61 40 25 58
+	cancel 1 3 1 u freespecial16
+	frame	data/chars/chris/063
+	sound   data/sounds/punch2.wav
+	attack5  74 69 52 29 6 1 0 0 20
+	dropv 4.5 0.3
+	frame	data/chars/chris/064
+	delay   1000
+	attack5  74 69 52 29 6 1 0 0 30
+	dropv 3 0.3
+	frame	data/chars/chris/064
+anim jumpforward
+	offset	72 140
+	delay 5
+	bbox	41 61 44 39
+	cancel 2 4 2 u freespecial12
+	frame	data/chars/chris/060
+	frame	data/chars/chris/061
+	delay   1000
+	sound   data/sounds/punch2.wav
+	attack5  66 77 66 42 6 1 0 0 20
+	frame	data/chars/chris/062
+anim jumpattack3
+	offset	72 140
+	delay 5
+	bbox	49 60 65 28
+	cancel 1 3 1 u freespecial16
+	frame	data/chars/chris/058
+	delay   5
+	sound   data/sounds/punch2.wav
+	attack5 69 60 45 29 4 1 0 0 20
+	frame	data/chars/chris/059
+	attack2 69 60 45 29 4 0 1 0 20
+	frame	data/chars/chris/059
+anim jumpattack2
+	offset	72 140
+	delay 5
+	dive  2 3
+	bbox	61 40 25 58
+	frame	data/chars/chris/070
+	attack3  83 85 44 43 6 1 0 0 20
+	otg 1
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065   
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065   
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066
+	frame	data/chars/chris/065
+	frame	data/chars/chris/067
+	frame	data/chars/chris/066   
+anim grab
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/044
+anim grabattack
+	offset	72 140
+	delay 20
+	bbox	57 43 27 73
+	frame	data/chars/chris/045
+	attack2 75 45 33 34 10 0 0 0 10
+	frame	data/chars/chris/046
+anim grabattack2
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	@cmd    keyint "ANI_FREESPECIAL16" 0 "UJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL24" 0 "DJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL29" 0 "FJ" 0 25
+	@cmd    keyint "ANI_FREESPECIAL30" 0 "BJ" 0 25
+	@cmd    keyint "ANI_FREESPECIAL26" 0 "J" 0 25
+	@cmd    keyint "ANI_FREESPECIAL17" 0 "FJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL27" 0 "BJ" 0 200
+	frame	data/chars/chris/032
+	frame	data/chars/chris/033
+	attack5  87 54 49 34 12 1 1 0 25
+	dropv 4 0.8
+	frame	data/chars/chris/034
+	attack5  0 0 0 0
+	frame	data/chars/chris/035
+anim throw
+	offset	72 140
+	delay 30
+	bbox	0 0 0 0
+	throwframewait 1
+	jumpframe 5 1 1 0
+	landframe 6
+	move 5
+	frame	data/chars/chris/083
+	move -10
+	delay 10
+	sound   data/sounds/chrrat.wav
+	frame	data/chars/chris/082
+	move 0
+	frame	data/chars/chris/081
+	delay   20
+	frame	data/chars/chris/080
+	delay 10
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim grabdown
+	delay 10
+	offset	72 140
+	jumpframe 0 3 0 0
+	bbox	56 67 38 37
+	landframe 6
+	attackone 0
+	frame	data/chars/chris/068
+	frame	data/chars/chris/069
+	frame	data/chars/chris/d1
+	frame	data/chars/chris/d2
+	frame	data/chars/chris/d3
+	delay   10000
+	attack  74 91 42 27 10 1 0 0 20
+	dropv 2 2
+	frame	data/chars/chris/d4
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	attack  0 0 0 0 0
+	frame	data/chars/chris/054
+anim grabup
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	frame	data/chars/chris/b1
+	frame	data/chars/chris/b2
+	attack  70 56 35 19 6 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/b2a
+	attack  0 0 0 0 0
+	frame	data/chars/chris/b1
+	frame	data/chars/chris/b2
+	attack  70 56 35 19 6 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/b3
+	attack  0 0 0 0 
+	frame	data/chars/chris/b1
+	frame	data/chars/chris/b2
+	attack  70 56 35 19 6 0 0 0 10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/b2a
+	attack  0 0 0 0 0
+	offset	72 140
+	delay 20
+	bbox	57 43 27 73
+	frame	data/chars/chris/a2
+	delay 10
+	@cmd velo001 2 0 0
+	frame	data/chars/chris/a3
+	delay 5
+	blast 81 59 30 29 20 1 0 30
+	sound   data/sounds/punch2.wav
+	dropv 3 2 -0.5
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/a4
+	hitflash smash
+	blast 81 59 30 29 25 1 0 35
+	dropv 3 2 -0.5
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/a4
+anim grabforward
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	attack2 72 71 31 22 10 0 0 0 20
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/030
+	attack2 0 0 0 0
+	delay 15
+	frame	data/chars/chris/030
+	frame	data/chars/chris/044
+anim grabforward2
+	offset	72 140
+	delay 20
+	jumpframe 2 0 -2 0
+	landframe 3
+	attackone 0
+	bbox	57 43 27 73
+	frame	data/chars/chris/029
+	delay  10
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/030
+	attack  72 71 55 20 10 1 0 0 20
+	dropv 2 3
+	frame	data/chars/chris/031
+	attack  0 
+	delay 15
+	frame	data/chars/chris/031       
+anim pain
+	offset	72 140
+	delay 2
+	bbox	57 43 27 73
+	frame	data/chars/chris/049a
+	delay 30
+	frame	data/chars/chris/049
+	delay 10
+	frame	data/chars/chris/049a
+anim pain2
+	offset	72 140
+	delay 2
+	bbox	57 43 27 73
+	frame	data/chars/chris/049a
+	delay 30
+	frame	data/chars/chris/049b
+	delay 10
+	frame	data/chars/chris/049a
+anim fall
+	offset	72 140
+	landframe 3
+	bbox	0 0 0 0
+	delay   1000
+	dropframe 1
+	frame	data/chars/chris/050
+	delay 10
+	@cmd recover
+	frame	data/chars/chris/050
+	delay 1000
+	frame	data/chars/chris/050
+	delay  10
+	frame	data/chars/chris/051
+	delay 30
+	frame	data/chars/chris/053
+anim fall6
+	offset	72 140
+	landframe 1
+	bbox	0 0 0 0
+	delay   1000
+	frame	data/chars/chris/050
+	delay  10
+	frame	data/chars/chris/051
+	delay 30
+	frame	data/chars/chris/053
+anim fall7
+	offset	72 140
+	delay 1000
+	bbox	0 0 0 0
+	landframe 3
+	frame	data/chars/chris/050
+	frame	data/chars/chris/051
+	frame	data/chars/chris/053
+	delay   10
+	frame	data/chars/chris/051
+	delay  30
+	frame	data/chars/chris/053
+anim fall8
+	offset	72 140
+	delay 1000
+	bbox	0 0 0 0
+	dropframe 5
+	landframe 6
+	frame	data/chars/chris/081
+	frame	data/chars/chris/050
+	frame	data/chars/chris/052
+	frame	data/chars/chris/053
+	frame	data/chars/chris/049a
+	frame	data/chars/chris/050
+	delay  10
+	frame	data/chars/chris/051
+	delay 30
+	frame	data/chars/chris/053
+anim rise
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	frame	data/chars/chris/078
+	offset	79 139
+	frame	data/chars/chris/079
+	offset	105 138
+	delay 15
+	frame	data/chars/chris/080
+	offset	103 139
+	delay 10
+	frame	data/chars/chris/081
+	offset	72 140
+	frame	data/chars/chris/082
+	offset	66 138
+	frame	data/chars/chris/083
+anim land
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	quakeframe 0 3 1
+	sound data/sounds/n/ycofgrd.wav
+	frame	data/chars/chris/047
+	frame	data/chars/chris/047
+	frame	data/chars/chris/047
+anim block
+	counterframe 0 1 0
+	followanim 4
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/048
+	@cmd    keyint "ANI_FOLLOW3" 0 "S" 0 200
+	frame	data/chars/chris/048
+anim follow1
+	offset	71 140
+	delay 5
+	bbox	57 43 27 73
+	sound data/sounds/block.wav
+	frame	data/chars/chris/048
+	offset	72 140
+	frame	data/chars/chris/048
+	offset	71 140
+	@cmd    keyint "ANI_FREESPECIAL9" 0 "SB" 0 200
+	frame	data/chars/chris/048
+	@cmd velo001 -2 0 0
+	offset	72 140
+	@cmd shoot "dust" 0 1 0
+	frame	data/chars/chris/048
+	frame	data/chars/chris/048
+	@cmd velo001 -1.6 0 0
+	frame	data/chars/chris/048
+	frame	data/chars/chris/048
+	@cmd velo001 -1.2 0 0
+	frame	data/chars/chris/048
+	frame	data/chars/chris/048
+	@cmd velo001 -0.8 0 0
+	frame	data/chars/chris/048
+	frame	data/chars/chris/048
+	@cmd velo001 -0.4 0 0
+	frame	data/chars/chris/048
+	frame	data/chars/chris/048
+	@cmd velo001 0 0 0
+	delay   5
+	frame	data/chars/chris/048
+anim freespecial17
+	offset	72 140
+	delay 10
+	jumpframe 0 4 1 0
+	attackone 1
+	landframe 5
+	quakeframe 5 3 -3
+	bbox	0 0 0 0
+	@cmd anti
+	frame	data/chars/chris/124
+	@cmd hurt 0 7
+	sound   data/sounds/huaa.wav
+	@cmd position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd hurt 0 7
+	@cmd position 0 -29 1 -1 -1
+	frame	data/chars/chris/126
+	@cmd hurt 0 7
+	@cmd position 0 -8 20 -1 -1
+	frame	data/chars/chris/127 
+	@cmd hurt 0 7
+	@cmd position 0 -5 25 -1 -1
+	delay 1000
+	frame	data/chars/chris/128
+	@cmd hurt 0 7
+	@cmd position 1 9 38 -1 -1
+	delay 10
+	@cmd shoot "slamfl" 0 58 1
+	@cmd shoot "dust" 0 1 0
+	sound data/sounds/bigfal.wav
+	frame	data/chars/chris/129
+	@cmd hurt 0 7
+	@cmd position 1 9 38 -1 -1
+	frame	data/chars/chris/129
+	@cmd hurt 0 7
+	@cmd position 1 9 38 -1 -1
+	frame	data/chars/chris/129
+	@cmd depost 0
+	delay 30
+	@cmd finish 50 3 -2 2 0 0
+	frame	data/chars/chris/129
+anim freespecial3
+	energycost 20
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	quakeframe 9 30 -1
+	spawnframe 9 160 240 0 1
+	subentity chrspd
+	hitfx data/sounds/empty.wav
+	frame	data/chars/chris/089
+	frame	data/chars/chris/090
+	frame	data/chars/chris/091
+	frame	data/chars/chris/092
+	frame	data/chars/chris/093
+	frame	data/chars/chris/094
+	frame	data/chars/chris/095
+	frame	data/chars/chris/096
+	frame	data/chars/chris/097
+	frame	data/chars/chris/098
+	delay 5
+	attack9 -1000 -1000 2000 2000 50 0 1 1 0 1000
+	otg 1
+	sound   data/sounds/icestorm.wav
+	frame	data/chars/chris/sp1
+	frame	data/chars/chris/047
+	frame	data/chars/chris/sp1
+	frame	data/chars/chris/047
+	frame	data/chars/chris/sp1
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp2
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp2
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp2
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp3
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp3
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp3
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp4
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp4
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp4
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp5
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp5
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp5
+	offset	72 140
+	frame	data/chars/chris/047
+	delay 10
+	blast   0 0 0 0 0 0
+	frame	data/chars/chris/099
+anim freespecial5
+	offset	71 103
+	delay 10
+	bbox	0 0 0 0
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 1 0
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/071
+	frame	data/chars/chris/0711
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial6
+	offset	71 103
+	delay 10
+	bbox	0 0 0 0
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 -1 0
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/071
+	frame	data/chars/chris/0711
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial9
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	jumpframe 1 0 -2 0
+	frame	data/chars/chris/082
+	offset	71 103
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/071
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0711
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial11
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	sound   data/sounds/punch2.wav
+	frame	data/chars/chris/e1
+	frame	data/chars/chris/e2
+	attack3 81 83 29 57 10 1 1 0 30
+	dropv 2 1
+	otg 1
+	frame	data/chars/chris/e3
+	attack3 0 0 0 0
+	frame	data/chars/chris/e2
+anim freespecial12
+	offset	53 111
+	delay 5
+	jumpframe 0 2 2 0
+	bbox	39 13 22 58
+	dropframe 15
+	landframe 16
+	frame	data/chars/chris/f1
+	attack5   45 53 33 39 10 1 0 0 30
+	dropv 4 2
+	sound data/sounds/huaa.wav
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	delay 1000
+	frame	data/chars/chris/f1
+	offset	72 140
+	delay 15
+	@cmd aiflag "jumping" 0 "common_land"
+	bbox	57 43 27 73
+	attack5 0 0 0 0 0 0
+	frame	data/chars/chris/054
+anim freespecial13
+	loop 1
+	offset	45 7
+	delay 20
+	fshadow 0
+	frame	data/chars/chris/sel1
+	frame	data/chars/chris/sel2
+anim freespecial14
+	offset	72 140
+	delay 10
+	dropframe 3
+	landframe 4
+	jumpframe 0 3 1 0
+	bbox	59 50 29 58
+	hitflash bblod
+	frame	data/chars/chris/054
+	frame	data/chars/chris/055
+	frame	data/chars/chris/056
+	delay 1000
+	frame	data/chars/chris/057
+	delay 15
+	bbox	57 43 27 73
+	attack3 64 132 17 11 10 1 0 0 30
+	dropv 2 1
+	otg 1
+	frame	data/chars/chris/132
+anim freespecial16
+	delay 10
+	offset	72 140
+	jumpframe 1 3 0.5 0
+	bbox	56 67 38 37
+	landframe 7 
+	frame	data/chars/chris/054
+	delay 10
+	sound data/sounds/jump.wav
+	frame	data/chars/chris/d4
+	attack5  73 59 52 71 10 1 0 0 10
+	dropv 5 0.3
+	frame	data/chars/chris/d3
+	attack 0 0 0 0 
+	frame	data/chars/chris/d2
+	frame	data/chars/chris/d1
+	frame	data/chars/chris/069
+	delay   1000
+	attack 34 86 34 39 5 1 1 0 10
+	dropv 2 1
+	frame	data/chars/chris/068
+	attack 0 0 0 0
+	delay 10
+	@cmd aiflag "jumping" 0 "common_land"
+	frame	data/chars/chris/054	
+anim freespecial18
+	offset	72 140
+	delay 10
+	jumpframe 1 3 0 0
+	bbox	0 0 0 0
+	energycost 10
+	frame	data/chars/chris/054
+	delay  10
+	frame	data/chars/chris/055
+	frame	data/chars/chris/056
+	frame	data/chars/chris/057
+	delay 1
+	@cmd ani001 "ANI_FREESPECIAL19" 0
+	frame	data/chars/chris/057
+anim freespecial19
+	offset	72 140
+	delay 5
+	dive 0 -1
+	bbox	0 0 0 0
+	@cmd keycheck
+	sound   data/sounds/huaa.wav
+	frame	data/chars/chris/0643
+	attack  71 70 55 53 2 0 1 0 5 20
+	seal 10 0
+	frame	data/chars/chris/064
+	@cmd flipdir
+	attack  71 70 55 53 2 0 1 0 5 20
+	frame	data/chars/chris/0642
+	attack  0 0 0 0 
+	frame	data/chars/chris/0641
+	@cmd flipdir
+	attack 0 0 0 0
+	frame	data/chars/chris/0643
+	attack  71 70 55 53 2 0 1 0 5 20
+	frame   data/chars/chris/064
+	@cmd flipdir
+	frame	data/chars/chris/0642
+	attack  71 70 55 53 2 0 1 0 5 20
+	frame	data/chars/chris/0641
+	@cmd flipdir
+	attack  0 0 0 0 
+	frame	data/chars/chris/0643
+	attack  71 70 55 53 2 0 1 0 5 20
+	frame	data/chars/chris/064
+	@cmd flipdir
+	attack 0 0 0 0
+	frame	data/chars/chris/0642
+	attack  71 70 55 53 2 0 1 0 5 20
+	frame   data/chars/chris/0641
+	@cmd flipdir
+	attack  0 0 0 0 
+	frame	data/chars/chris/0643
+	attack5  71 70 55 53 2 0 1 0 5 20
+	frame	data/chars/chris/064
+	@cmd flipdir
+	attack 0 0 0 0
+	frame	data/chars/chris/0642
+	attack5  71 70 55 53 2 0 1 0 5 20
+	frame   data/chars/chris/0641
+	@cmd flipdir
+	frame	data/chars/chris/0643
+	attack5  71 70 55 53 2 0 1 0 5 20
+	frame	data/chars/chris/064
+	@cmd flipdir
+	attack  0 0 0 0 
+	hitflash bblod
+	frame	data/chars/chris/0642
+	attack3  71 70 55 53 10 1 0 0
+	dropv 2 4
+	frame	data/chars/chris/0641
+	@cmd flipdir
+	attack5 0 0 0 0
+	frame	data/chars/chris/0643
+	attack3  71 70 55 53 10 1 0 0
+	dropv 2 4 
+	frame   data/chars/chris/064
+	attack  0 0 0 0
+	@cmd ani001 "ANI_FREESPECIAL20" 0
+	frame	data/chars/chris/063
+anim freespecial20
+	offset	72 140
+	jumpframe 0 1 0 0
+	dropframe 0
+	landframe 1
+	delay 1000
+	bbox	59 50 29 58
+	frame   data/chars/chris/057
+	delay 20
+	frame   data/chars/chris/047
+anim freespecial22
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/c1
+	delay 60
+	@cmd    keyint "ANI_FOLLOW2" 0 "A2" 0 200
+	frame	data/chars/chris/c2
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/c1
+anim follow2
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/c2
+	@cmd    keyint "ANI_FOLLOW2" 0 "A2" 0 200
+	frame	data/chars/chris/c2
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/c1
+anim follow3
+	counterframe 0 1 0
+	followanim 1
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/chris/048
+	@cmd    keyint "ANI_FOLLOW5" 0 "S" 0 200
+	frame	data/chars/chris/048
+anim follow5
+	counterframe 0 1 0
+	followanim 1
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/chris/048
+	@cmd    keyint "ANI_FOLLOW3" 0 "S" 0 200
+	frame	data/chars/chris/048
+anim follow4
+	@script
+	void self = getlocalvar("self");
+	changeentityproperty(self, "aiflag", "idling", 0);
+	changeentityproperty(self, "aiflag", "walking", 0);
+	changeentityproperty(self, "aiflag", "blocking", 0);
+	changeentityproperty(self, "takeaction", "common_pain");
+	@end_script
+	offset	72 140
+	delay 1
+	bbox	0 0 0 0
+	jumpframe 1 2 3 0
+	landframe 11
+	spawnframe 0 10 0 1 0
+	subentity cntfl
+	sound data/sounds/n/ataket.wav
+	frame	data/chars/chris/048
+	offset	53 111
+	delay 5
+	blast   45 53 33 39 2 1 0 5
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	frame	data/chars/chris/f1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	delay 1000
+	blast 0
+	frame	data/chars/chris/f1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	@cmd velo001 0 0 0
+	frame	data/chars/chris/054
+	frame	data/chars/chris/006
+anim follow10
+	offset	89 140
+	delay 100
+	bbox	0 0 0 0
+	jumpframe 0 2 1 0
+	landframe 1
+	frame	data/chars/chris/d5
+	delay 5
+	@cmd velo001 2 0 0
+	hitflash bflash
+	sound data/sounds/slide.wav
+	attack  81 97 66 46 10 1 0 0 10
+	otg 1
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 1.5 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	attack  0 0 0 0 0
+	@cmd velo001 0 0 0
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/099
+anim freespecial24
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	frame	data/chars/chris/097
+	frame	data/chars/chris/098
+	delay 5
+	shock 33 64 79 138 30 1 0 0 10
+	dropv 4 1.5
+	frame	data/chars/chris/sp1
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp2
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp3
+	offset	72 140
+	blast   0 0 0 0 0 0
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp4
+	offset	72 140
+	frame	data/chars/chris/047
+	offset	72 195
+	frame	data/chars/chris/sp4
+	offset	72 195
+	frame	data/chars/chris/sp5
+	offset	72 140
+	frame	data/chars/chris/047
+	delay 10
+	frame	data/chars/chris/099
+anim freespecial25
+	offset	72 140
+	delay 50
+	bbox	57 43 27 73
+	frame	data/chars/chris/c1
+	delay 1000
+	frame	data/chars/chris/c2
+anim freespecial26
+	offset	72 140
+	delay 10
+	jumpframe 0 6 0 0
+	attackone 1
+	landframe 7
+	quakeframe 7 3 -4
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/chris/124
+	@cmd    hurt 0 7
+	sound   data/sounds/jump.wav
+	@cmd    position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd    position 0 -29 1 -1 -1
+	frame	data/chars/chris/126
+	@cmd    position 0 -8 20 -1 -1
+	frame	data/chars/chris/127
+	@cmd    position 0 -5 25 -1 -1
+	frame	data/chars/chris/128
+	@cmd    position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	delay 1000
+	sound data/sounds/n/ataket.wav
+	frame	data/chars/chris/125a
+	@cmd    position 0 -10 1 -1 1
+	delay 10
+	@cmd shoot "slamfl" 0 15 1
+	@cmd shoot "dst" 0 0 1
+	@cmd    hurt 0 8
+	sound   data/sounds/bigfal.wav
+	frame	data/chars/chris/125a
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	frame	data/chars/chris/125a
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	frame	data/chars/chris/125a
+	@cmd    keyint "ANI_FREESPECIAL17" 0 "FJ" 0 200
+	@cmd    keyint "ANI_FREESPECIAL27" 0 "BJ" 0 200
+	@cmd    depost 0
+	@cmd    finish 75 3 -2 2 0 0
+	frame	data/chars/chris/125a
+	delay 20
+	offset	72 140
+	frame	data/chars/chris/080
+	delay 10
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial27
+	offset	72 140
+	delay 30
+	jumpframe 0 4 -1 0
+	attackone 1
+	landframe 7
+	quakeframe 7 3 -3
+	bbox	0 0 0 0
+	@cmd    anti
+	@cmd    position 0 28 10 -1 1
+	frame	data/chars/chris/128
+	delay  10
+	@cmd    hurt 0 7
+	sound   data/sounds/huaa.wav
+	@cmd    position 1 0 50 -1 1
+	frame	data/chars/chris/127
+	@cmd    hurt 0 7
+	@cmd    position 1 0 50 -1 1
+	frame	data/chars/chris/127
+	offset	63 140
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 30 -1 -1
+	frame	data/chars/chris/126
+	offset	63 130
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 20 -1 -1
+	frame	data/chars/chris/126
+	offset	63 120
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 10 -1 -1
+	frame	data/chars/chris/126
+	offset	63 110
+	delay 1000
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 0 -1 -1
+	frame	data/chars/chris/126
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 0 -1 -1
+	delay 10
+	@cmd shoot "slamfl" 0 15 1
+	@cmd shoot "dust" 0 1 0
+	sound   data/sounds/bigfal.wav
+	frame	data/chars/chris/126
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 0 -1 -1
+	frame	data/chars/chris/126
+	@cmd    hurt 0 8
+	@cmd    position 0 -30 0 -1 -1
+	frame	data/chars/chris/126
+	@cmd    depost 0
+	@cmd    finish 50 3 2 2 0 1
+	frame	data/chars/chris/126
+	delay 20
+	offset	72 140
+	frame	data/chars/chris/080
+	delay 10
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial28
+	offset	89 140
+	delay 100
+	bbox	0 0 0 0
+	jumpframe 0 2 1 0
+	landframe 1
+	frame	data/chars/chris/d5
+	delay 5
+	@cmd velo001 1.5 0 0
+	hitflash bflash
+	bbox	53 97 45 51
+	attack3  81 97 66 46 10 1 0 0 10
+	otg 1
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	attack  0 0 0 0 0
+	@cmd velo001 0 0 0
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/099
+anim freespecial29
+	offset	72 140
+	delay 10
+	jumpframe 0 6 1 0
+	attackone 1
+	landframe 7
+	quakeframe 7 3 -4
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/chris/124
+	@cmd    hurt 0 7
+	sound   data/sounds/jump.wav
+	@cmd    position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd    position 0 -29 1 -1 -1
+	frame	data/chars/chris/126
+	@cmd    position 0 -8 20 -1 -1
+	frame	data/chars/chris/127
+	@cmd    position 0 -5 25 -1 -1
+	frame	data/chars/chris/128
+	@cmd    position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	delay 1000
+	sound data/sounds/n/ataket.wav
+	frame	data/chars/chris/125a
+	@cmd    position 0 -10 1 -1 1
+	delay 10
+	@cmd shoot "slamfl" 0 15 1
+	@cmd shoot "dst" 0 0 1
+	@cmd    hurt 0 8
+	sound   data/sounds/bigfal.wav
+	frame	data/chars/chris/125a
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	frame	data/chars/chris/125a
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	frame	data/chars/chris/125a
+	@cmd    depost 0
+	@cmd    finish 75 3 -2 2 0 0
+	frame	data/chars/chris/125a
+	delay 20
+	offset	72 140
+	frame	data/chars/chris/080
+	delay 10
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial30
+	offset	72 140
+	delay 10
+	jumpframe 0 6 -1 0
+	attackone 1
+	landframe 7
+	quakeframe 7 3 -4
+	bbox	0 0 0 0
+	@cmd    anti
+	frame	data/chars/chris/124
+	@cmd    hurt 0 7
+	sound   data/sounds/jump.wav
+	@cmd    position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd    position 0 -29 1 -1 -1
+	frame	data/chars/chris/126
+	@cmd    position 0 -8 20 -1 -1
+	frame	data/chars/chris/127
+	@cmd    position 0 -5 25 -1 -1
+	frame	data/chars/chris/128
+	@cmd    position 0 2 -30 -1 -1
+	frame	data/chars/chris/125
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	delay 1000
+	sound data/sounds/n/ataket.wav
+	frame	data/chars/chris/125a
+	@cmd    position 0 -10 1 -1 1
+	delay 10
+	@cmd shoot "slamfl" 0 15 1
+	@cmd shoot "dst" 0 0 1
+	@cmd    hurt 0 8
+	sound   data/sounds/bigfal.wav
+	frame	data/chars/chris/125a
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	frame	data/chars/chris/125a
+	@cmd    hurt 0 8
+	@cmd    position 0 -10 1 -1 1
+	frame	data/chars/chris/125a
+	@cmd    depost 0
+	@cmd    finish 75 3 -2 2 0 0
+	frame	data/chars/chris/125a
+	delay 20
+	offset	72 140
+	frame	data/chars/chris/080
+	delay 10
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial31
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	frame	data/chars/chris/a2
+	offset	73 140
+	@cmd shoot "aura1" 0 0 1
+	frame	data/chars/chris/a2
+	offset	72 140
+	frame	data/chars/chris/a2
+	offset	71 140
+	@cmd shoot "aura2" 0 0 -1
+	frame	data/chars/chris/a2
+	offset	72 140
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL32" 0 "S" 0 200
+	frame	data/chars/chris/a2
+	delay 10
+	@cmd velo001 1 0 0 
+	frame	data/chars/chris/a3
+	delay 3
+	attack5 81 59 30 29 10 1 0 0 20
+	sound   data/sounds/punch2.wav
+	dropv 5 0.7 
+	@cmd velo001 2 0 0 
+	frame	data/chars/chris/a5
+	delay 2
+	hitflash bblod
+	attack5 81 59 30 29 10 1 0 0 20
+	dropv 5 0.7 
+	frame	data/chars/chris/a5
+	hitflash smash
+	attack5 81 59 30 29 15 1 0 0 20
+	dropv 5 0.7 
+	@cmd velo001 1 0 0 
+	frame	data/chars/chris/a5
+	@cmd velo001 0.5 0 0 
+	delay 10
+	attack5 0 0 0 0
+	frame	data/chars/chris/a5
+	@cmd velo001 0 0 0 
+	frame	data/chars/chris/a5
+anim freespecial32
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	cancel 7 11 1 D F A freespecial33
+	frame	data/chars/chris/a2
+	offset	74 140
+	@cmd shoot "aura1" 0 0 1
+	frame	data/chars/chris/a2
+	offset	72 140
+	frame	data/chars/chris/a2
+	offset	70 140
+	@cmd shoot "aura3" 0 0 -1
+	frame	data/chars/chris/a2
+	offset	72 140
+	delay 1
+	@cmd    keyint "ANI_FREESPECIAL32" 0 "S" 0 200
+	frame	data/chars/chris/a2
+	delay 10
+	@cmd velo001 3 0 0 
+	sound data/sounds/n/ataket.wav
+	frame	data/chars/chris/a3
+	delay 3
+	attack5 81 59 30 29 10 1 1 0 20
+	sound   data/sounds/punch2.wav
+	dropv 6 0.5 
+	frame	data/chars/chris/a5
+	delay 2
+	hitflash bblod
+	attack5 81 59 30 29 10 1 1 0 20
+	dropv 6 0.5 
+	frame	data/chars/chris/a5
+	hitflash smash
+	attack5 81 59 30 29 15 1 1 0 20
+	dropv 6 0.5 
+	frame	data/chars/chris/a5
+	@cmd velo001 1 0 0 
+	delay 10
+	attack5 0 0 0 0
+	frame	data/chars/chris/a5
+	@cmd velo001 0 0 0 
+	frame	data/chars/chris/a5
+anim freespecial33
+	offset	72 140
+	delay 10
+	jumpframe 1 4.5 2 0
+	bbox	39 13 22 58
+	dropframe 16
+	landframe 19
+	cancel 6 16 1 u freespecial16
+	frame	data/chars/chris/054
+	offset	53 111
+	delay 5
+	sound data/sounds/jump.wav
+	frame	data/chars/chris/f1
+	sound data/sounds/huaa.wav
+	attack5 45 53 33 39 10 1 0 0 20
+	dropv 4 1
+	frame	data/chars/chris/f2
+	attack5 0 0 0 0 0
+	frame	data/chars/chris/f3
+	attack5 45 53 33 39 2 1 0 0 5 20 
+	dropv 4 1
+	frame	data/chars/chris/f1
+	attack5 0 0 0 0 0	
+	frame	data/chars/chris/f2
+	attack5 45 53 33 39 2 1 0 5 20 
+	dropv 4 1
+	frame	data/chars/chris/f3
+	attack5 0 0 0 0 0	
+	frame	data/chars/chris/f1
+	attack5 45 53 33 39 2 1 0 5 20 
+	dropv 4 1
+	frame	data/chars/chris/f2
+	attack5 0 0 0 0 0	
+	frame	data/chars/chris/f3
+	attack5 45 53 33 39 2 1 0 5 20 
+	dropv 4 1
+	frame	data/chars/chris/f1
+	attack5 0 0 0 0 0
+	frame	data/chars/chris/f2
+	attack5 45 53 33 39 2 1 0 5 20 
+	dropv 4 1
+	frame	data/chars/chris/f3
+	attack5 0 0 0 0 0
+	frame	data/chars/chris/f1
+	attack5 45 53 33 39 2 1 0 5 20 
+	dropv 4 1
+	frame	data/chars/chris/f2
+	frame	data/chars/chris/f3
+	attack5 0 0 0 0 0 0
+	offset	72 140
+	delay 10
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/057
+	frame	data/chars/chris/056
+	delay 1000
+	frame	data/chars/chris/055
+	delay 15
+	bbox	57 43 27 73
+	@cmd velo001 0 0 0
+	frame	data/chars/chris/047
+anim runslide
+	offset	89 140
+	delay 100
+	bbox	0 0 0 0
+	jumpframe 0 2 2 0
+	landframe 1
+	frame	data/chars/chris/d5
+	delay 5
+	@cmd velo001 2 0 0
+	hitflash bflash
+	bbox	53 97 45 51
+	sound data/sounds/slide.wav
+	attack3 81 97 66 46 10 1 0 0 10
+	otg 1
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 1.5 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	@cmd velo001 1 0 0
+	frame	data/chars/chris/d6
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d7
+	@cmd velo001 0.5 0 0
+	frame	data/chars/chris/d9
+	frame	data/chars/chris/d8
+	frame	data/chars/chris/d9
+	attack 0
+	@cmd velo001 0 0 0
+	offset	72 140
+	delay 15
+	bbox	57 43 27 73
+	frame	data/chars/chris/099
+anim freespecial2
+	offset	71 103
+	delay 10
+	bbox	0 0 0 0
+	@cmd velo001 0 1 0
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/071
+	frame	data/chars/chris/0711
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial4
+	offset	71 103
+	delay 10
+	bbox	0 0 0 0
+	@cmd velo001 0 -1 0
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/071
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial7
+	offset	71 103
+	delay 10
+	bbox	0 0 0 0
+	@cmd velo001 -2 0 0
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/071
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0711
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial8
+	offset	71 103
+	delay 10
+	bbox	0 0 0 0
+	@cmd velo001 2 0 0
+	frame	data/chars/chris/0711
+	frame	data/chars/chris/0712
+	frame	data/chars/chris/0713
+	frame	data/chars/chris/071
+	frame	data/chars/chris/0711
+	@cmd changeentityproperty getlocalvar("self") "velocity" 0 0 0
+	offset	72 140
+	delay 15
+	frame	data/chars/chris/080
+	delay 10
+	move 5
+	frame	data/chars/chris/081
+	frame	data/chars/chris/082
+	frame	data/chars/chris/083
+anim freespecial39
+	@script
+	void self = getlocalvar("self");
+	void SHealth = getentityproperty(self,"health"); 
+	if (frame == 5){
+	setidle(self);
+	changeentityproperty(self, "health", SHealth + 4);
+	}
+	@end_script
+	offset	72 140
+	jumpframe 0 3 -1 0
+	bbox	0 0 0 0
+	landframe 5 
+	delay 10
+	sound data/sounds/jump.wav
+	frame	data/chars/chris/d4
+	@cmd aiflag "falling" 0 "common_pain"
+	@cmd aiflag "drop" 0 "common_pain"
+	@cmd aiflag "projectile" 0 "common_pain"
+	frame	data/chars/chris/d2
+	frame	data/chars/chris/d1
+	frame	data/chars/chris/069
+	delay   1000
+	frame	data/chars/chris/056
+	attack 0 0 0 0
+	delay 5
+	frame	data/chars/chris/054	

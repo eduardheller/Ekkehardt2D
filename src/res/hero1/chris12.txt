@@ -1,0 +1,120 @@
+name	Chris12
+health	100
+speed	11
+mprate 1
+nolife 1
+chargerate 2
+type	none
+shadow	3
+makeinv 4 
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 1 1 1
+gfxshadow 1
+load brlknf
+jumpheight 4
+bounce 1
+icon data/chars/chris/icon
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+com a2 freespecial22
+animationscript data/scripts/toss.c
+palette data/chars/chris/chrbrl/10
+anim spawn
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/chris/chrbrl/10
+anim respawn
+	offset	72 140
+	delay 1
+	bbox	57 43 27 73
+	frame	data/chars/chris/chrbrl/10
+anim idle        
+	loop	1
+	offset	72 140
+	delay 20
+	bbox	57 43 27 73
+	frame	data/chars/chris/chrbrl/1
+anim walk
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/chris/chrbrl/2
+	frame	data/chars/chris/chrbrl/3
+	frame	data/chars/chris/chrbrl/4
+	frame	data/chars/chris/chrbrl/5
+	frame	data/chars/chris/chrbrl/6
+	frame	data/chars/chris/chrbrl/7
+	frame	data/chars/chris/chrbrl/8
+	frame	data/chars/chris/chrbrl/9
+anim run
+anim runattack
+anim get
+	delay 10
+	offset	72 140
+	bbox	0 0 0 0
+	frame	data/chars/chris/chrbrl/10
+anim attackbackward
+anim attack1
+	delay 10
+	offset	72 140
+	bbox	0 0 0 0
+	shootframe 1
+	sound data/sounds/n/ataket.wav
+	frame	data/chars/chris/chrbrl/13
+	delay 5
+	@cmd toss "brlknf" 0 73 -2
+	frame	data/chars/chris/chrbrl/11
+	delay 35
+	frame	data/chars/chris/chrbrl/12
+anim attack2
+anim attack3
+anim attack4
+anim attackdown
+anim attackup
+anim special
+anim special2
+anim special3
+anim jumpdelay
+anim jumpland
+anim jump
+anim jumpattack
+anim forwardjump
+anim runjump
+anim jumpforward
+anim jumpattack2
+anim jumpattack3
+anim grab
+anim grabattack2
+anim throw
+anim grabdown
+anim grabup
+anim grabforward
+anim grabforward2
+anim block
+anim follow1
+anim follow2
+anim follow5
+anim follow6
+anim follow6
+anim follow8
+anim follow7
+anim freespecial2
+anim freespecial4
+anim freespecial11
+anim freespecial14
+anim runslide
+anim freespecial22
+	delay 10
+	offset	72 140
+	bbox	0 0 0 0
+	weaponframe 1 0
+	frame	data/chars/chris/chrbrl/10
+	frame	data/chars/chris/chrbrl/14

@@ -1,0 +1,113 @@
+name	jack12
+health	100
+speed	10
+nolife 1
+type	none
+shadow	3
+makeinv 4 
+throw	2 4
+grabdistance 24
+bflash flashf
+thold 1
+noquake 1
+throwdamage	20
+atchain 1 1 1 1
+gfxshadow 1
+jumpheight 4
+bounce 1
+com a2 freespecial22
+icon data/chars/jack/icon
+animationscript data/scripts/toss.c
+parrow	data/sprites/parow1	-20 -125
+parrow2	data/sprites/parow2	-20 -125
+dust dust
+palette data/chars/jack/jkbrl/02
+anim spawn
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkbrl/02
+anim idle    
+	loop	1
+	offset	72 140
+	delay 5
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkbrl/02
+anim get   
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	frame	data/chars/jack/jkbrl/01
+anim walk
+	loop	1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	frame	data/chars/jack/jkbrl/03
+	frame	data/chars/jack/jkbrl/04
+	frame	data/chars/jack/jkbrl/05
+	frame	data/chars/jack/jkbrl/06
+	frame	data/chars/jack/jkbrl/07
+	frame	data/chars/jack/jkbrl/08
+	frame	data/chars/jack/jkbrl/09
+	frame	data/chars/jack/jkbrl/10
+anim run
+anim runattack
+anim attackbackward
+anim attack1
+	offset	72 140
+	delay 10
+	bbox	57 43 27 73
+	shootframe 1
+	sound data/sounds/n/thisisit.wav	
+	frame	data/chars/jack/jkbrl/11
+	delay 40
+	@cmd toss "brlknf" 0 73 -2
+	frame	data/chars/jack/jkbrl/12
+anim attack2
+anim attack3
+anim attack4
+anim attackdown
+anim attackup
+anim special
+anim special2
+anim special3
+anim jumpdelay
+anim jumpland
+anim jump
+anim forwardjump
+anim runjump
+anim runjumpattack
+anim jumpforward
+anim jumpattack2
+anim jumpattack3
+anim grab
+anim jumpattack
+anim grabattack2
+anim throw
+anim grabdown
+anim grabup
+anim grabforward
+anim grabforward2
+anim land
+anim block
+anim follow1
+anim follow2
+anim follow5
+anim follow6
+anim follow6
+anim follow8
+anim follow7
+anim freespecial2
+anim freespecial4
+anim freespecial11      
+anim freespecial14
+anim freespecial16
+anim freespecial23
+anim freespecial22
+	offset	72 140
+	delay 10
+	bbox	0 0 0 0
+	weaponframe 1 0
+	frame	data/chars/jack/jkbrl/01
+	frame	data/chars/jack/jkbrl/13
